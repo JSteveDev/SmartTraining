@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/size_cardview_margin"
+    android:layout_marginTop="@dimen/size_cardview_margin"
+    android:layout_marginRight="@dimen/size_cardview_margin"
+    app:cardCornerRadius="@dimen/size_cardview_radius"
+    app:cardElevation="@dimen/size_cardview_elevation"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/padding_sport"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <com.example.smarttraining.Views.TextViewRoboto
+            android:layout_weight="30"
+            android:id="@+id/fragment_sport_icone_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/padding_sport"
+            app:fontName="Roboto_Medium"
+            android:text="Badminton"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="@dimen/size_sport" />
+
+        <ImageView
+            android:layout_weight="70"
+            android:id="@+id/fragment_sport_icone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_badminton" />
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

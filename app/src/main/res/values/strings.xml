@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name" translatable="false">SmartTraining</string>
+
+    <!-- BOTTOM NAVIGATION VIEW !-->
+    <string name="bottom_navigation_menu_arbitration">Arbitration</string>
+    <string name="bottom_navigation_menu_history">History</string>
+
+    <string name="arbitration_title">Arbitration</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="history_title">History</string>
+
+    <array name="sportNameList">
+        <item>Badminton</item>
+        <item>Basket-ball</item>
+        <item>Crossfit</item>
+        <item>Escalade</item>
+        <item>Futsal</item>
+        <item>Handball</item>
+        <item>Tennis</item>
+        <item>Ultimate</item>
+        <item>Volleyball</item>
+    </array>
+
+    <array name="sportImageList">
+        <item>badminton_background</item>
+        <item>basketball_background</item>
+        <item>crossfit_background</item>
+        <item>escalade_background</item>
+        <item>futsal_background</item>
+        <item>handball_background</item>
+        <item>tennis_background</item>
+        <item>historique_background</item>
+        <item>volleyball_background</item>
+    </array>
+
+    <array name="sportIconList">
+        <item>ic_badminton</item>
+        <item>ic_basketball</item>
+        <item>ic_crossfit</item>
+        <item>ic_escalade</item>
+        <item>ic_futsal</item>
+        <item>ic_handball</item>
+        <item>ic_tennis</item>
+        <item>ic_ultimate</item>
+        <item>ic_volleyball</item>
+    </array>
+
+    <!-- FONT ID -->
+    <string name="Roboto_Bold" translatable="false">Roboto-Bold</string>
+    <string name="Roboto_Medium" translatable="false">Roboto-Medium</string>
+    <string name="Roboto_Light" translatable="false">Roboto-Light</string>
+    <string name="Roboto_Thin" translatable="false">Roboto-Thin</string>
+
+
+
+
+</resources>

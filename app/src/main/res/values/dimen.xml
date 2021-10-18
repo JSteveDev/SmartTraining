@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- TextViews -->
+    <dimen name="size_sport">40sp</dimen>
+    <dimen name="padding_sport">10dp</dimen>
+
+    <!-- ImageViews -->
+    <dimen name="size_image_sport">200dip</dimen>
+
+    <!-- CardViews -->
+    <dimen name="size_cardview_margin">5dip</dimen>
+    <dimen name="size_cardview_radius">5dip</dimen>
+    <dimen name="size_cardview_elevation">5dip</dimen>
+
+
+
+</resources>
