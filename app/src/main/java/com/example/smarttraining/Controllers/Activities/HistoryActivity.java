@@ -2,30 +2,40 @@ package com.example.smarttraining.Controllers.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.FragmentManager;
+import androidx.viewpager2.widget.ViewPager2;
 
-import com.example.smarttraining.Controllers.Fragments.HistoryDetailFragment;
+import com.example.smarttraining.Adapters.HistoryPageAdapter;
 import com.example.smarttraining.Controllers.Fragments.HistoryFragment;
 import com.example.smarttraining.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import icepick.Icepick;
+import icepick.State;
 
 public class HistoryActivity extends AppCompatActivity {
 
 
     @BindView(R.id.activity_history_bottom_navigation)
     BottomNavigationView mBottomNavigationView;
+    @BindView(R.id.activity_history_viewpager)
+    ViewPager2 pager;
+    @BindView(R.id.activity_history_tablayout)
+    TabLayout tabLayout;
     private HistoryFragment historyActivityFragment;
-    private HistoryDetailFragment historyDetailFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +43,8 @@ public class HistoryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_history);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         ButterKnife.bind(this);
-
-        this.configureAndShowHistoryFragment();
+        Icepick.restoreInstanceState(this, savedInstanceState);
+        this.configureViewPager();
         this.configureBottomView();
         this.configureToolbar();
     }
@@ -57,29 +67,22 @@ public class HistoryActivity extends AppCompatActivity {
         });
     }
 
-    private void configureAndShowHistoryFragment() {
-        // A - Get FragmentManager (Support) and Try to find existing instance of fragment in FrameLayout container
-        historyActivityFragment = (HistoryFragment) getSupportFragmentManager().findFragmentById(R.id.activity_history_frame_layout);
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Icepick.saveInstanceState(this, outState);
+    }
 
-        if (historyActivityFragment == null) {
-            // B - Create new main fragment
-            historyActivityFragment = new HistoryFragment();
-            // C - Add it to FrameLayout container
-            getSupportFragmentManager().beginTransaction()
-                    .add(R.id.activity_history_frame_layout, historyActivityFragment)
-                    .commit();
-        }
+    private void configureViewPager() {
+        String[] sportNameList = getResources().getStringArray(R.array.sportNameList);
 
-        //We only add HistoryDetailFragment in Tablet mode (If found activity_detail_history_frame_layout)
-        historyDetailFragment = (HistoryDetailFragment) getSupportFragmentManager().findFragmentById(R.id.activity_detail_history_frame_layout);
+        pager.setAdapter(new HistoryPageAdapter(getSupportFragmentManager(), getLifecycle(), sportNameList));
 
-        //A - We only add DetailFragment in Tablet mode (If found frame_layout_detail)
-        if (historyDetailFragment == null && findViewById(R.id.activity_detail_history_frame_layout) != null) {
-            historyDetailFragment = new HistoryDetailFragment();
-            getSupportFragmentManager().beginTransaction()
-                    .add(R.id.activity_detail_history_frame_layout, historyDetailFragment)
-                    .commit();
-        }
+        new TabLayoutMediator(tabLayout, pager,
+                (tab, position) -> tab.setText(sportNameList[position])
+        ).attach();
+
+        tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
     }
 
     private void configureToolbar() {

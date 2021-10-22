@@ -10,11 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartTraining">
         <activity
-            android:name=".Controllers.Activities.DetailHistoryActivity"
-            android:label="Detail"
-            android:parentActivityName=".Controllers.Activities.HistoryActivity"
-             />
-        <activity
             android:name=".Controllers.Activities.HistoryActivity"
             android:label="@string/history_title" />
         <activity

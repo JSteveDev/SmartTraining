@@ -2,7 +2,6 @@ package com.example.smarttraining.Controllers.Fragments;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.smarttraining.Adapters.SportIconAdapter;
 import com.example.smarttraining.R;
 
 import butterknife.BindView;
@@ -40,7 +39,7 @@ public class HistoryFragment extends BaseFragment {
     // --------------
 
     private void configureRecyclerView() {
-        this.recyclerView.setAdapter(new SportIconAdapter(getResources().getStringArray(R.array.sportNameList), getResources().getStringArray(R.array.sportIconList)));
+
     }
 
 }
