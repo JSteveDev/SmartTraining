@@ -13,28 +13,28 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="@dimen/padding_sport"
-        android:background="@color/white"
-        android:orientation="horizontal">
+        android:background="@color/secondaryColor"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_sport">
 
         <com.example.smarttraining.Views.TextViewRoboto
-            android:layout_weight="30"
             android:id="@+id/fragment_sport_icone_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="30"
             android:paddingStart="@dimen/padding_sport"
-            app:fontName="Roboto_Medium"
-            android:text="Badminton"
             android:textColor="@color/primaryTextColor"
-            android:textSize="@dimen/size_sport" />
+            android:textSize="@dimen/size_sport"
+            app:fontName="Roboto_Medium" />
 
         <ImageView
-            android:layout_weight="70"
             android:id="@+id/fragment_sport_icone"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_weight="70"
             android:scaleType="fitCenter"
-            android:src="@drawable/ic_badminton" />
+            android:src="@drawable/ic_badminton"
+            app:tint="@color/white" />
 
 
     </LinearLayout>
