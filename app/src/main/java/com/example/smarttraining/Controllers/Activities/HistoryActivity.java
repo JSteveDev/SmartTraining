@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.example.smarttraining.Controllers.Fragments.HistoryDetailFragment;
 import com.example.smarttraining.Controllers.Fragments.HistoryFragment;
 import com.example.smarttraining.Controllers.Fragments.SportsFragment;
 import com.example.smarttraining.R;
@@ -24,7 +25,8 @@ public class HistoryActivity extends AppCompatActivity {
 
 	@BindView(R.id.activity_history_bottom_navigation)
 	BottomNavigationView mBottomNavigationView;
-	private HistoryFragment historyActivity;
+	private HistoryFragment historyActivityFragment;
+	private HistoryDetailFragment historyDetailFragment;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -58,14 +60,25 @@ public class HistoryActivity extends AppCompatActivity {
 
 	private void configureAndShowHistoryFragment() {
 		// A - Get FragmentManager (Support) and Try to find existing instance of fragment in FrameLayout container
-		historyActivity = (HistoryFragment) getSupportFragmentManager().findFragmentById(R.id.activity_history_frame_layout);
+		historyActivityFragment = (HistoryFragment) getSupportFragmentManager().findFragmentById(R.id.activity_history_frame_layout);
 
-		if (historyActivity == null) {
+		if (historyActivityFragment == null) {
 			// B - Create new main fragment
-			historyActivity = new HistoryFragment();
+			historyActivityFragment = new HistoryFragment();
 			// C - Add it to FrameLayout container
 			getSupportFragmentManager().beginTransaction()
-					.add(R.id.activity_history_frame_layout, historyActivity)
+					.add(R.id.activity_history_frame_layout, historyActivityFragment)
+					.commit();
+		}
+
+		//We only add HistoryDetailFragment in Tablet mode (If found activity_detail_history_frame_layout)
+		historyDetailFragment = (HistoryDetailFragment) getSupportFragmentManager().findFragmentById(R.id.activity_detail_history_frame_layout);
+
+		//A - We only add DetailFragment in Tablet mode (If found frame_layout_detail)
+		if (historyDetailFragment == null && findViewById(R.id.activity_detail_history_frame_layout) != null) {
+			historyDetailFragment = new HistoryDetailFragment();
+			getSupportFragmentManager().beginTransaction()
+					.add(R.id.activity_detail_history_frame_layout, historyDetailFragment)
 					.commit();
 		}
 	}

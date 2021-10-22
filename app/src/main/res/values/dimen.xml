@@ -2,7 +2,8 @@
 <resources>
 
     <!-- TextViews -->
-    <dimen name="size_sport">30sp</dimen>
+    <dimen name="size_sport_arbritation">30sp</dimen>
+    <dimen name="size_sport_history">20sp</dimen>
     <dimen name="padding_sport">10dp</dimen>
 
     <!-- ImageViews -->

@@ -23,7 +23,7 @@
             android:padding="@dimen/padding_sport"
             app:fontName="Roboto_Medium"
             android:textColor="@color/primaryTextColor"
-            android:textSize="@dimen/size_sport" />
+            android:textSize="@dimen/size_sport_arbritation" />
 
         <ImageView
             android:id="@+id/fragment_sport_item_image"

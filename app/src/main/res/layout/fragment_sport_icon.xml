@@ -24,7 +24,7 @@
             android:layout_weight="30"
             android:paddingStart="@dimen/padding_sport"
             android:textColor="@color/primaryTextColor"
-            android:textSize="@dimen/size_sport"
+            android:textSize="@dimen/size_sport_history"
             app:fontName="Roboto_Medium" />
 
         <ImageView
