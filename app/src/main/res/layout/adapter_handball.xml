@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/size_cardview_margin"
+    android:layout_marginTop="@dimen/size_cardview_margin"
+    android:layout_marginRight="@dimen/size_cardview_margin"
+    app:cardBackgroundColor="@color/secondaryColor"
+    app:cardCornerRadius="@dimen/size_cardview_radius"
+    app:cardElevation="@dimen/size_cardview_elevation"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.example.smarttraining.Views.TextViewRoboto
+                android:id="@+id/handball_date"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="30"
+                android:gravity="center"
+                android:text="Date"
+                android:textColor="@color/primaryTextColor" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="15"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <com.example.smarttraining.Views.TextViewRoboto
+                        android:id="@+id/handball_equipe1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Equipe_1"
+                        android:textColor="@color/primaryTextColor" />
+
+                    <com.example.smarttraining.Views.TextViewRoboto
+                        android:id="@+id/handball_equipe2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Equipe_2"
+                        android:textColor="@color/primaryTextColor" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <com.example.smarttraining.Views.TextViewRoboto
+                        android:id="@+id/handball_capitaine1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Capitaine_1"
+                        android:textColor="@color/primaryTextColor" />
+
+                    <com.example.smarttraining.Views.TextViewRoboto
+                        android:id="@+id/handball_capitaine2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Capitaine_2"
+                        android:textColor="@color/primaryTextColor" />
+
+                </LinearLayout>
+
+                <com.example.smarttraining.Views.TextViewRoboto
+                    android:id="@+id/handball_period"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:gravity="center"
+                    android:text="Period : 30 minutes"
+                    android:textColor="@color/primaryTextColor" />
+
+            </LinearLayout>
+
+            <com.example.smarttraining.Views.TextViewRoboto
+                android:id="@+id/handball_score"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="30"
+                android:gravity="center"
+                android:text="Score du match"
+                android:textColor="@color/primaryTextColor" />
+
+            <CheckBox
+                android:id="@+id/sport_co_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/basket_historique_view"
+            android:layout_width="match_parent"
+            android:layout_height="2dp" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
