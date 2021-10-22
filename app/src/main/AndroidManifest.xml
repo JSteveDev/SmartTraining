@@ -9,15 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartTraining">
-
+        <activity
+            android:name=".Controllers.Activities.DetailHistoryActivity"
+            android:label="Detail"
+            android:parentActivityName=".Controllers.Activities.HistoryActivity"
+             />
         <activity
             android:name=".Controllers.Activities.HistoryActivity"
-            android:label="@string/history_title"
-            android:exported="true" />
-
+            android:label="@string/history_title" />
         <activity
             android:name=".Controllers.Activities.MainActivity"
-            android:exported="true"
             android:label="@string/arbitration_title">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
