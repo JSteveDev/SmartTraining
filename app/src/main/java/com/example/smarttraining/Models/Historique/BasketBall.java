@@ -8,7 +8,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 @Entity
-public class Handball implements Serializable {
+public class BasketBall implements Serializable {
 
     @PrimaryKey (autoGenerate = true)
     private int id;
@@ -21,7 +21,7 @@ public class Handball implements Serializable {
     private int score2;
     private int period;
 
-    public Handball(String captain1, String captain2, String teamName1, String teamName2, int score1, int score2, int period) {
+    public BasketBall(String captain1, String captain2, String teamName1, String teamName2, int score1, int score2, int period) {
         this.captain1 = captain1;
         this.captain2 = captain2;
         this.teamName1 = teamName1;

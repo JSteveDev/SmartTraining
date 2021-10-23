@@ -1,32 +1,32 @@
-package com.example.smarttraining.Models.Historique;
+package com.example.smarttraining.Models.Historique.DAO;
 
 import static androidx.room.OnConflictStrategy.REPLACE;
 
-import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
-import androidx.room.Update;
+
+import com.example.smarttraining.Models.Historique.Futsal;
 
 import java.util.List;
 
 @Dao
-public interface HandballDao {
+public interface FutsalDao {
 
     // Get all data query
-    @Query("SELECT * FROM Handball")
-    List<Handball> getItems();
+    @Query("SELECT * FROM Futsal")
+    List<Futsal> getItems();
 
     // Insert query
     @Insert(onConflict = REPLACE)
-    void insertItem(Handball item);
+    void insertItem(Futsal item);
 
     // Delete query
     @Delete
-    void deleteItem(Handball item);
+    void deleteItem(Futsal item);
 
     // Delete all query
     @Delete
-    void deleteAllItem(List<Handball> items);
+    void deleteAllItem(List<Futsal> items);
 }

@@ -8,7 +8,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 @Entity
-public class Handball implements Serializable {
+public class Volleyball implements Serializable {
 
     @PrimaryKey (autoGenerate = true)
     private int id;
@@ -19,16 +19,20 @@ public class Handball implements Serializable {
     private String teamName2;
     private int score1;
     private int score2;
-    private int period;
+    private int nb_set;
+    private int nb_point;
+    private int tpsTM;
 
-    public Handball(String captain1, String captain2, String teamName1, String teamName2, int score1, int score2, int period) {
+    public Volleyball(String captain1, String captain2, String teamName1, String teamName2, int score1, int score2, int nb_set, int nb_point, int tpsTM) {
         this.captain1 = captain1;
         this.captain2 = captain2;
         this.teamName1 = teamName1;
         this.teamName2 = teamName2;
         this.score1 = score1;
         this.score2 = score2;
-        this.period = period;
+        this.nb_set = nb_set;
+        this.nb_point = nb_point;
+        this.tpsTM = tpsTM;
 
         SimpleDateFormat dateFormat;
         dateFormat = new SimpleDateFormat("dd/MM/yyyy");
@@ -45,7 +49,9 @@ public class Handball implements Serializable {
     public String getTeamName2() { return teamName2; }
     public int getScore1() { return score1; }
     public int getScore2() { return score2; }
-    public int getPeriod() { return period; }
+    public int getNb_set() { return nb_set; }
+    public int getNb_point() { return nb_point; }
+    public int getTpsTM() { return tpsTM; }
 
     // SETTERS
     public void setDate(String date) { this.date = date; }
@@ -55,6 +61,8 @@ public class Handball implements Serializable {
     public void setTeamName2(String teamName2) { this.teamName2 = teamName2; }
     public void setScore1(int score1) { this.score1 = score1; }
     public void setScore2(int score2) { this.score2 = score2; }
-    public void setPeriod(int period) { this.period = period; }
     public void setId(Integer id) { this.id = id; }
+    public void setNb_set(int nb_set) { this.nb_set = nb_set; }
+    public void setNb_point(int nb_point) { this.nb_point = nb_point; }
+    public void setTpsTM(int tpsTM) { this.tpsTM = tpsTM; }
 }

@@ -15,7 +15,6 @@ import icepick.Icepick;
 public abstract class BaseFragment extends Fragment {
 
 	// Force developer implement those methods
-	protected abstract BaseFragment newInstance();
 	protected abstract int getFragmentLayout();
 	protected abstract void configureDesign();
 	protected abstract void updateDesign();

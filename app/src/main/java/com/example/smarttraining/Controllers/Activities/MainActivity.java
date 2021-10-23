@@ -12,8 +12,12 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.room.Room;
 
 import com.example.smarttraining.Controllers.Fragments.SportsFragment;
+import com.example.smarttraining.Models.Historique.BasketBall;
+import com.example.smarttraining.Models.Historique.Futsal;
 import com.example.smarttraining.Models.Historique.Handball;
 import com.example.smarttraining.Models.Historique.RoomDBHistory;
+import com.example.smarttraining.Models.Historique.Ultimate;
+import com.example.smarttraining.Models.Historique.Volleyball;
 import com.example.smarttraining.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -42,8 +46,20 @@ public class MainActivity extends AppCompatActivity {
 
 		dataBase = RoomDBHistory.getInstance(this);
 
-		dataBase.handballDao().insertItem(new Handball("Handball", "Maximilien", "Augustin",
+		dataBase.handballDao().insertItem(new Handball("Maximilien", "Augustin",
 				"Nantes", "Paris Saint Germain",3,3,30));
+
+		dataBase.basketBallDao().insertItem(new BasketBall("Henry", "Pierre",
+				"Nantes", "Paris Saint Germain",80,104,30));
+
+		dataBase.futsalDao().insertItem(new Futsal("Henry", "Pierre",
+				"Nantes", "Paris Saint Germain",0,2,20));
+
+		dataBase.ultimateDao().insertItem(new Ultimate("Henry", "Pierre",
+				"Nantes", "Paris Saint Germain",0,2));
+
+		dataBase.volleyballDao().insertItem(new Volleyball("Henry", "Pierre",
+				"Nantes", "Paris Saint Germain",0,2, 5, 25, 30));
 	}
 
 	private void configureBottomView() {

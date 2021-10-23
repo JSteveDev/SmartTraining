@@ -22,7 +22,7 @@
             android:orientation="horizontal">
 
             <com.example.smarttraining.Views.TextViewRoboto
-                android:id="@+id/handball_date"
+                android:id="@+id/ultimate_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -33,7 +33,7 @@
                 android:textColor="@color/primaryTextColor" />
 
             <ImageView
-                android:id="@+id/handball_delete_ic"
+                android:id="@+id/ultimate_delete_ic"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="4"
@@ -59,7 +59,7 @@
                     android:orientation="horizontal">
 
                     <com.example.smarttraining.Views.TextViewRoboto
-                        android:id="@+id/handball_equipe1"
+                        android:id="@+id/ultimate_equipe1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -75,7 +75,7 @@
                         android:textColor="@color/primaryTextColor" />
 
                     <com.example.smarttraining.Views.TextViewRoboto
-                        android:id="@+id/handball_equipe2"
+                        android:id="@+id/ultimate_equipe2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -91,7 +91,7 @@
                     android:orientation="horizontal">
 
                     <com.example.smarttraining.Views.TextViewRoboto
-                        android:id="@+id/handball_capitaine1"
+                        android:id="@+id/ultimate_capitaine1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -101,7 +101,7 @@
                         android:textColor="@color/primaryTextColor" />
 
                     <com.example.smarttraining.Views.TextViewRoboto
-                        android:id="@+id/handball_capitaine2"
+                        android:id="@+id/ultimate_capitaine2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -115,7 +115,7 @@
             </LinearLayout>
 
             <com.example.smarttraining.Views.TextViewRoboto
-                android:id="@+id/handball_score"
+                android:id="@+id/ultimate_score"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
@@ -125,15 +125,6 @@
                 android:textColor="@color/primaryTextColor" />
 
         </LinearLayout>
-
-        <com.example.smarttraining.Views.TextViewRoboto
-            android:id="@+id/handball_period"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingStart="@dimen/padding_sport"
-            android:paddingEnd="@dimen/padding_sport"
-            android:text="Period : 30 minutes"
-            android:textColor="@color/primaryTextColor" />
 
         <View
             android:layout_width="match_parent"

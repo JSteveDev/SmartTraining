@@ -17,11 +17,6 @@ public class SportsFragment extends BaseFragment {
 	// --------------
 
 	@Override
-	protected BaseFragment newInstance() {
-		return new SportsFragment();
-	}
-
-	@Override
 	protected int getFragmentLayout() {
 		return R.layout.fragment_sports;
 	}

@@ -22,7 +22,7 @@
             android:orientation="horizontal">
 
             <com.example.smarttraining.Views.TextViewRoboto
-                android:id="@+id/handball_date"
+                android:id="@+id/volleyball_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -33,7 +33,7 @@
                 android:textColor="@color/primaryTextColor" />
 
             <ImageView
-                android:id="@+id/handball_delete_ic"
+                android:id="@+id/volleyball_delete_ic"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="4"
@@ -59,7 +59,7 @@
                     android:orientation="horizontal">
 
                     <com.example.smarttraining.Views.TextViewRoboto
-                        android:id="@+id/handball_equipe1"
+                        android:id="@+id/volleyball_equipe1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -75,7 +75,7 @@
                         android:textColor="@color/primaryTextColor" />
 
                     <com.example.smarttraining.Views.TextViewRoboto
-                        android:id="@+id/handball_equipe2"
+                        android:id="@+id/volleyball_equipe2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -91,7 +91,7 @@
                     android:orientation="horizontal">
 
                     <com.example.smarttraining.Views.TextViewRoboto
-                        android:id="@+id/handball_capitaine1"
+                        android:id="@+id/volleyball_capitaine1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -101,7 +101,7 @@
                         android:textColor="@color/primaryTextColor" />
 
                     <com.example.smarttraining.Views.TextViewRoboto
-                        android:id="@+id/handball_capitaine2"
+                        android:id="@+id/volleyball_capitaine2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -115,7 +115,7 @@
             </LinearLayout>
 
             <com.example.smarttraining.Views.TextViewRoboto
-                android:id="@+id/handball_score"
+                android:id="@+id/volleyball_score"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
@@ -127,12 +127,30 @@
         </LinearLayout>
 
         <com.example.smarttraining.Views.TextViewRoboto
-            android:id="@+id/handball_period"
+            android:id="@+id/volleyball_set"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingStart="@dimen/padding_sport"
             android:paddingEnd="@dimen/padding_sport"
-            android:text="Period : 30 minutes"
+            android:text="Nombre de sets : "
+            android:textColor="@color/primaryTextColor" />
+
+        <com.example.smarttraining.Views.TextViewRoboto
+            android:id="@+id/volleyball_point_max"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/padding_sport"
+            android:paddingEnd="@dimen/padding_sport"
+            android:text="Point maximum : "
+            android:textColor="@color/primaryTextColor" />
+
+        <com.example.smarttraining.Views.TextViewRoboto
+            android:id="@+id/volleyball_TM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/padding_sport"
+            android:paddingEnd="@dimen/padding_sport"
+            android:text="Durée du Temps Mort : "
             android:textColor="@color/primaryTextColor" />
 
         <View

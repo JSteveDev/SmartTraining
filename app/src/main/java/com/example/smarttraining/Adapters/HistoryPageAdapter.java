@@ -21,7 +21,7 @@ public class HistoryPageAdapter extends FragmentStateAdapter {
     @NonNull
     @Override
     public Fragment createFragment(int position) {
-        return new HistoryFragment();
+        return HistoryFragment.newInstance(position);
     }
 
     @Override
