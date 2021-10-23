@@ -3,16 +3,15 @@ package com.example.smarttraining.Models.Historique;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-import java.sql.Date;
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
 
 @Entity
-public class Handball{
+public class Handball implements Serializable {
 
     @PrimaryKey (autoGenerate = true)
-    private Integer id;
+    private int id;
     private String category;
     private String date;
     private String captain1;
@@ -35,9 +34,8 @@ public class Handball{
 
         SimpleDateFormat dateFormat;
         dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        String date = dateFormat.format(Calendar.getInstance().getTime());
 
-        this.date = date;
+        this.date = dateFormat.format(Calendar.getInstance().getTime());
     }
 
     // GETTERS

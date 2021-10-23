@@ -2,7 +2,6 @@ package com.example.smarttraining.Controllers.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.WindowManager;
 import android.widget.Toast;
@@ -10,13 +9,11 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.fragment.app.FragmentManager;
 import androidx.room.Room;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.smarttraining.Adapters.HistoryPageAdapter;
-import com.example.smarttraining.Controllers.Fragments.HistoryFragment;
-import com.example.smarttraining.Models.Historique.SaveMyMatchesDataBase;
+import com.example.smarttraining.Models.Historique.RoomDBHistory;
 import com.example.smarttraining.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -26,7 +23,6 @@ import com.google.android.material.tabs.TabLayoutMediator;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import icepick.Icepick;
-import icepick.State;
 
 public class HistoryActivity extends AppCompatActivity {
 
@@ -38,7 +34,7 @@ public class HistoryActivity extends AppCompatActivity {
     @BindView(R.id.activity_history_tablayout)
     TabLayout tabLayout;
 
-    private SaveMyMatchesDataBase dataBase;
+    private RoomDBHistory dataBase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,13 +46,6 @@ public class HistoryActivity extends AppCompatActivity {
         this.configureViewPager();
         this.configureBottomView();
         this.configureToolbar();
-
-        dataBase = Room.inMemoryDatabaseBuilder(getApplicationContext(),
-                SaveMyMatchesDataBase.class)
-                .allowMainThreadQueries()
-                .build();
-
-        Toast.makeText(getApplicationContext(), String.valueOf(dataBase.handballDao().getItems().size()), Toast.LENGTH_SHORT).show();
     }
 
     private void configureBottomView() {

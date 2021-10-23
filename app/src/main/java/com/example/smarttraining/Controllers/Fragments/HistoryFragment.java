@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.room.Room;
 
 import com.example.smarttraining.Adapters.HandballAdapter;
-import com.example.smarttraining.Models.Historique.SaveMyMatchesDataBase;
+import com.example.smarttraining.Models.Historique.RoomDBHistory;
 import com.example.smarttraining.R;
 
 import butterknife.BindView;
@@ -16,8 +16,7 @@ public class HistoryFragment extends BaseFragment {
     @BindView(R.id.fragment_sport_history_recyclerView)
     RecyclerView recyclerView;
 
-
-    private SaveMyMatchesDataBase dataBase;
+    private RoomDBHistory dataBase;
 
     // --------------
     // BASE METHODS
@@ -47,15 +46,9 @@ public class HistoryFragment extends BaseFragment {
     // --------------
 
     private void configureRecyclerView() {
+        dataBase = RoomDBHistory.getInstance(getActivity());
 
-        dataBase = Room.inMemoryDatabaseBuilder(getActivity().getApplicationContext(),
-                SaveMyMatchesDataBase.class)
-                .allowMainThreadQueries()
-                .build();
-
-        Toast.makeText(getContext(), String.valueOf(dataBase.handballDao().getItems().size()), Toast.LENGTH_SHORT).show();
-
-        this.recyclerView.setAdapter(new HandballAdapter(dataBase.handballDao().getItems()));
+        this.recyclerView.setAdapter(new HandballAdapter(getActivity(),  dataBase.handballDao().getItems()));
     }
 
 }

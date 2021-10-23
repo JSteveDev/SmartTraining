@@ -1,7 +1,10 @@
 package com.example.smarttraining.Models.Historique;
 
+import static androidx.room.OnConflictStrategy.REPLACE;
+
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
+import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
@@ -11,15 +14,19 @@ import java.util.List;
 @Dao
 public interface HandballDao {
 
+    // Get all data query
     @Query("SELECT * FROM Handball")
     List<Handball> getItems();
 
-    @Insert
-    long insertItem(Handball item);
+    // Insert query
+    @Insert(onConflict = REPLACE)
+    void insertItem(Handball item);
 
-    @Update
-    int updateItem(Handball item);
+    // Delete query
+    @Delete
+    void deleteItem(Handball item);
 
-    @Query("DELETE FROM Handball WHERE id = :itemId")
-    int deleteItem(long itemId);
+    // Delete all query
+    @Delete
+    void deleteAllItem(List<Handball> items);
 }

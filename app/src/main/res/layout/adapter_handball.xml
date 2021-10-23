@@ -26,7 +26,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:layout_weight="30"
+                android:layout_weight="6"
                 android:gravity="center"
                 android:text="Date"
                 android:textColor="@color/primaryTextColor" />
@@ -34,7 +34,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="15"
+                android:layout_weight="3"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -47,7 +47,7 @@
                         android:id="@+id/handball_equipe1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="start"
+                        android:layout_gravity="center"
                         android:layout_weight="1"
                         android:gravity="center"
                         android:text="Equipe_1"
@@ -57,7 +57,7 @@
                         android:id="@+id/handball_equipe2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="start"
+                        android:layout_gravity="center"
                         android:layout_weight="1"
                         android:gravity="center"
                         android:text="Equipe_2"
@@ -74,7 +74,7 @@
                         android:id="@+id/handball_capitaine1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="start"
+                        android:layout_gravity="center"
                         android:layout_weight="1"
                         android:gravity="center"
                         android:text="Capitaine_1"
@@ -84,7 +84,7 @@
                         android:id="@+id/handball_capitaine2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="start"
+                        android:layout_gravity="center"
                         android:layout_weight="1"
                         android:gravity="center"
                         android:text="Capitaine_2"
@@ -96,7 +96,7 @@
                     android:id="@+id/handball_period"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="start"
+                    android:layout_gravity="center"
                     android:gravity="center"
                     android:text="Period : 30 minutes"
                     android:textColor="@color/primaryTextColor" />
@@ -108,15 +108,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:layout_weight="30"
+                android:layout_weight="6"
                 android:gravity="center"
                 android:text="Score du match"
                 android:textColor="@color/primaryTextColor" />
 
-            <CheckBox
-                android:id="@+id/sport_co_checkbox"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent" />
+            <ImageView
+                android:id="@+id/handball_delete_ic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="6"
+                android:padding="12dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_delete_white_24" />
 
         </LinearLayout>
 
