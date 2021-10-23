@@ -4,21 +4,32 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.room.Room;
 
 import com.example.smarttraining.Controllers.Fragments.SportsFragment;
+import com.example.smarttraining.Models.Historique.Handball;
+import com.example.smarttraining.Models.Historique.HandballDao;
+import com.example.smarttraining.Models.Historique.SaveMyMatchesDataBase;
 import com.example.smarttraining.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+
+import java.sql.Date;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
 
+	private SaveMyMatchesDataBase dataBase;
 
 	@BindView(R.id.activity_main_bottom_navigation)
 	BottomNavigationView mBottomNavigationView;
@@ -34,6 +45,17 @@ public class MainActivity extends AppCompatActivity {
 		this.configureAndShowSportsFragment();
 		this.configureBottomView();
 		this.configureToolbar();
+
+		dataBase = Room.inMemoryDatabaseBuilder(getApplicationContext(),
+				SaveMyMatchesDataBase.class)
+				.allowMainThreadQueries()
+				.build();
+
+		/*dataBase.handballDao().insertItem(new Handball("Handball", "Cap1", "Cap2",
+				"Nantes", "Poitiers",3,3,30));*/
+
+
+		Toast.makeText(getApplicationContext(), String.valueOf(dataBase.handballDao().getItems().size()), Toast.LENGTH_SHORT).show();
 	}
 
 	private void configureBottomView() {

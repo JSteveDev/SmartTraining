@@ -71,12 +71,12 @@ public class HandballAdapter extends RecyclerView.Adapter<HandballAdapter.ItemVi
 
 		public void updateWithItem(Handball handball) {
 			this.date.setText(handball.getDate().toString());
-			this.equipe1.setText(handball.getTeamNames().get(0));
-			this.equipe2.setText(handball.getTeamNames().get(1));
-			this.capitaine1.setText(handball.getTeamPlayers1().get(0));
-			this.capitaine2.setText(handball.getTeamPlayers2().get(0));
+			this.equipe1.setText(handball.getTeamName1());
+			this.equipe2.setText(handball.getTeamName2());
+			this.capitaine1.setText(handball.getCaptain1());
+			this.capitaine2.setText(handball.getCaptain2());
 			this.period.setText("Period : " + handball.getPeriod() + " minutes");
-			this.score.setText(handball.getScore()[0] + " - " + handball.getScore()[1]);
+			this.score.setText(handball.getScore1() + " - " + handball.getScore2());
 
 		}
 	}
