@@ -21,4 +21,8 @@
         <item name="android:textSize">21sp</item>
     </style>
 
+    <style name="AppTheme.Picker" parent="Theme.AppCompat.Light.NoActionBar" >
+        <item name="android:textColorPrimary">@color/white</item>
+    </style>
+
 </resources>
