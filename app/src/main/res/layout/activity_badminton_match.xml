@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/secondaryColor"
@@ -19,8 +18,10 @@
             android:orientation="vertical">
 
             <com.example.smarttraining.Views.TextViewRoboto
+                android:id="@+id/badminton_match_name_team_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="@string/team_1"
                 android:textColor="@color/secondaryTextColor"
                 android:textSize="@dimen/config_textsize" />
@@ -35,7 +36,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text="5"
+                    android:text="0"
                     android:textColor="@color/secondaryTextColor"
                     android:textSize="200sp" />
 
@@ -44,7 +45,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:text="2"
+                    android:text="0"
                     android:textColor="@color/secondaryTextColor"
                     android:textSize="100sp" />
 
@@ -55,28 +56,30 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textSize="100sp"
+                android:text="00:00"
                 android:textColor="@color/secondaryTextColor"
-                android:text="00:00" />
+                android:textSize="80sp" />
 
             <com.example.smarttraining.Views.TextViewRoboto
+                android:id="@+id/badminton_match_name_team_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="@string/team_2"
                 android:textColor="@color/secondaryTextColor"
                 android:textSize="@dimen/config_textsize" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_weight="1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="1">
 
                 <com.example.smarttraining.Views.TextViewRoboto
                     android:id="@+id/badminton_match_score_team_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text="5"
+                    android:text="0"
                     android:textColor="@color/secondaryTextColor"
                     android:textSize="200sp" />
 
@@ -85,11 +88,47 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:text="2"
+                    android:text="0"
                     android:textColor="@color/secondaryTextColor"
                     android:textSize="100sp" />
 
             </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.example.smarttraining.Views.TextViewRoboto
+                    android:id="@+id/badminton_match_score_set_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/undefined_score"
+                    android:textColor="@color/secondaryTextColor"
+                    android:textSize="@dimen/config_textsize" />
+
+                <com.example.smarttraining.Views.TextViewRoboto
+                    android:id="@+id/badminton_match_score_set_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/undefined_score"
+                    android:textColor="@color/secondaryTextColor"
+                    android:textSize="@dimen/config_textsize" />
+
+                <com.example.smarttraining.Views.TextViewRoboto
+                    android:id="@+id/badminton_match_score_set_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/undefined_score"
+                    android:textColor="@color/secondaryTextColor"
+                    android:textSize="@dimen/config_textsize" />
+            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>

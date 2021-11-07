@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.NumberPicker;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,8 +22,8 @@ import butterknife.ButterKnife;
 
 public class BadmintonConfig extends AppCompatActivity {
 
-    private TextView[] joueurs_equipe1;
-    private TextView[] joueurs_equipe2;
+    private EditText[] joueurs_equipe1;
+    private EditText[] joueurs_equipe2;
 
     @BindView (R.id.badminton_config_mode_jeu) Button mode_jeu;
     @BindView (R.id.badminton_config_set) Button nb_set_gagnant;
@@ -54,11 +55,11 @@ public class BadmintonConfig extends AppCompatActivity {
     }
 
     private void initialisation_equipes(){
-        joueurs_equipe1 = new TextView[2];
+        joueurs_equipe1 = new EditText[2];
         joueurs_equipe1[0] = findViewById(R.id.badminton_config_eq1_j1);
         joueurs_equipe1[1] = findViewById(R.id.badminton_config_eq1_j2);
 
-        joueurs_equipe2 = new TextView[2];
+        joueurs_equipe2 = new EditText[2];
         joueurs_equipe2[0] = findViewById(R.id.badminton_config_eq2_j1);
         joueurs_equipe2[1] = findViewById(R.id.badminton_config_eq2_j2);
 
@@ -77,11 +78,69 @@ public class BadmintonConfig extends AppCompatActivity {
 
         play.setOnClickListener(view -> {
             Intent otherActivity = new Intent(BadmintonConfig.this, BadmintonMatch.class);
+            otherActivity.putExtra("teams_members",SavePlayersNames());
             otherActivity.putExtra("nb_set_gagnant",Integer.parseInt(nb_set_gagnant.getText().toString()));
             otherActivity.putExtra("nb_point",Integer.parseInt(nb_point.getText().toString()));
             otherActivity.putExtra("nb_point_max",Integer.parseInt(nb_point_max.getText().toString()));
             startActivity(otherActivity);
         });
+    }
+
+    private String[] SavePlayersNames() {
+
+        String[] teamsMembers = new String[2];
+
+        switch (mode_jeu.getText().toString()){
+
+            case "SIMPLE":
+                if (joueurs_equipe1[0].getText().toString().trim().isEmpty()){
+                    teamsMembers[0] = "Joueur 1";
+                } else {
+                    teamsMembers[0] = joueurs_equipe1[0].getText().toString().trim();
+                }
+
+                if (joueurs_equipe2[0].getText().toString().trim().isEmpty()){
+                    teamsMembers[1] = "Joueur 2";
+                } else {
+                    teamsMembers[1] = joueurs_equipe2[0].getText().toString().trim();
+                }
+                break;
+
+            case "DOUBLE":
+                if (joueurs_equipe1[0].getText().toString().trim().isEmpty()){
+                    if (joueurs_equipe1[1].getText().toString().trim().isEmpty()){
+                        teamsMembers[0] = "Equipe 1";
+                    } else {
+                        teamsMembers[0] = joueurs_equipe1[1].getText().toString().trim();
+                    }
+                } else {
+                    if (joueurs_equipe1[1].getText().toString().isEmpty()){
+                        teamsMembers[0] = joueurs_equipe1[0].getText().toString().trim();
+                    } else {
+                        teamsMembers[0] = joueurs_equipe1[0].getText().toString().trim() + " - " + joueurs_equipe1[1].getText().toString().trim();
+                    }
+                }
+
+                if (joueurs_equipe2[0].getText().toString().trim().isEmpty()){
+                    if (joueurs_equipe2[1].getText().toString().trim().isEmpty()){
+                        teamsMembers[1] = "Equipe 2";
+                    } else {
+                        teamsMembers[1] = joueurs_equipe2[1].getText().toString().trim();
+                    }
+                } else {
+                    if (joueurs_equipe2[1].getText().toString().isEmpty()){
+                        teamsMembers[1] = joueurs_equipe2[0].getText().toString().trim();
+                    } else {
+                        teamsMembers[1] = joueurs_equipe2[0].getText().toString().trim() + " - " + joueurs_equipe1[2].getText().toString().trim();
+                    }
+                }
+                break;
+
+            default:
+                Toast.makeText(this, "default", Toast.LENGTH_SHORT).show();
+                teamsMembers = null;
+        }
+        return teamsMembers;
     }
 
     private void SetNbPicker(Button button, int max) {

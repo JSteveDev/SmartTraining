@@ -78,5 +78,6 @@
     <string name="match_score">Score du match</string>
     <string name="period">Period : 30 minutes</string>
     <string name="TM_period">Durée du Temps Mort :</string>
+    <string name="undefined_score">-/-</string>
 
 </resources>
