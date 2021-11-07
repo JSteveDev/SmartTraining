@@ -2,12 +2,12 @@
     <string name="app_name" translatable="false">SmartTraining</string>
 
     <!-- BOTTOM NAVIGATION VIEW !-->
-    <string name="bottom_navigation_menu_arbitration">Arbitration</string>
-    <string name="bottom_navigation_menu_history">History</string>
+    <string name="bottom_navigation_menu_arbitration">Arbitrage</string>
+    <string name="bottom_navigation_menu_history">Historique</string>
 
-    <string name="arbitration_title">Arbitration</string>
+    <string name="arbitration_title">Arbitrage</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="history_title">History</string>
+    <string name="history_title">Historique</string>
 
     <array name="sportNameList">
         <item>Badminton</item>
@@ -50,8 +50,33 @@
     <string name="Roboto_Medium" translatable="false">Roboto-Medium</string>
     <string name="Roboto_Light" translatable="false">Roboto-Light</string>
     <string name="Roboto_Thin" translatable="false">Roboto-Thin</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <!-- SCROLLER -->
+    <string name="apply">Appliquer</string>
+
+    <!-- BADMINTON CONFIG -->
+    <string name="game_mode">Mode de jeu</string>
+    <string name="game_mode_item">SIMPLE</string>
+    <string name="set_number">Sets gagnants</string>
+    <string name="set_number_value">2</string>
+    <string name="set_point">Point par set</string>
+    <string name="set_point_value">21</string>
+    <string name="set_point_max">Point maximum</string>
+    <string name="set_point_max_value">25</string>
+    <string name="team_1">Equipe 1 :</string>
+    <string name="team_2">Equipe 2 :</string>
+    <string name="player_1">Joueur 1</string>
+    <string name="player_2">Joueur 2</string>
+    <string name="play_button">Jouer</string>
+
+
+    <!-- HISTORY ADAPTER -->
+    <string name="adapter_date">Date</string>
+    <string name="VS">Vs</string>
+    <string name="captain_1">Capitaine_1</string>
+    <string name="captain_2">Capitaine_2</string>
+    <string name="match_score">Score du match</string>
+    <string name="period">Period : 30 minutes</string>
+    <string name="TM_period">Durée du Temps Mort :</string>
 
 </resources>

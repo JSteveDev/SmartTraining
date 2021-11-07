@@ -24,7 +24,27 @@
         <entry key="..\:/AndroidProject/SmartTraining/app/src/main/res/layout/scroll_picker_1.xml" value="0.35597826086956524" />
         <entry key="..\:/AndroidProject/SmartTraining/app/src/main/res/layout/toolbar.xml" value="0.3428442028985507" />
         <entry key="..\:/AndroidProject/SmartTraining/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.36666666666666664" />
+        <entry key="..\:/Android_Projects/SmartTraining/app/src/main/res/drawable/bottom_navigation_colors.xml" value="0.26614583333333336" />
+        <entry key="..\:/Android_Projects/SmartTraining/app/src/main/res/drawable/custom_button_white_border.xml" value="0.26614583333333336" />
+        <entry key="..\:/Android_Projects/SmartTraining/app/src/main/res/drawable/custom_edittext.xml" value="0.26614583333333336" />
+        <entry key="..\:/Android_Projects/SmartTraining/app/src/main/res/layout-land/activity_badminton_config.xml" value="0.21164021164021163" />
         <entry key="..\:/Android_Projects/SmartTraining/app/src/main/res/layout-land/fragment_history.xml" value="0.21197916666666666" />
+        <entry key="..\:/Android_Projects/SmartTraining/app/src/main/res/layout-land/fragment_sports.xml" value="0.16354166666666667" />
+        <entry key="..\:/Android_Projects/SmartTraining/app/src/main/res/layout-sw600dp-land/fragment_sports.xml" value="0.12265625" />
+        <entry key="..\:/Android_Projects/SmartTraining/app/src/main/res/layout-sw600dp/fragment_sports.xml" value="0.10724043715846994" />
+        <entry key="..\:/Android_Projects/SmartTraining/app/src/main/res/layout/activity_badminton_config.xml" value="0.25" />
+        <entry key="..\:/Android_Projects/SmartTraining/app/src/main/res/layout/activity_badminton_match.xml" value="0.25" />
+        <entry key="..\:/Android_Projects/SmartTraining/app/src/main/res/layout/activity_history.xml" value="0.14221014492753623" />
+        <entry key="..\:/Android_Projects/SmartTraining/app/src/main/res/layout/activity_main.xml" value="0.19293478260869565" />
+        <entry key="..\:/Android_Projects/SmartTraining/app/src/main/res/layout/adapter_handball.xml" value="0.4" />
+        <entry key="..\:/Android_Projects/SmartTraining/app/src/main/res/layout/adapter_ultimate.xml" value="0.25" />
+        <entry key="..\:/Android_Projects/SmartTraining/app/src/main/res/layout/adapter_volleyball.xml" value="0.25" />
+        <entry key="..\:/Android_Projects/SmartTraining/app/src/main/res/layout/fragment_history.xml" value="0.14221014492753623" />
+        <entry key="..\:/Android_Projects/SmartTraining/app/src/main/res/layout/fragment_sports.xml" value="0.14221014492753623" />
+        <entry key="..\:/Android_Projects/SmartTraining/app/src/main/res/layout/fragment_sports_item.xml" value="0.18840579710144928" />
+        <entry key="..\:/Android_Projects/SmartTraining/app/src/main/res/layout/scroll_picker_1.xml" value="0.25" />
+        <entry key="..\:/Android_Projects/SmartTraining/app/src/main/res/layout/toolbar.xml" value="0.14221014492753623" />
+        <entry key="..\:/Android_Projects/SmartTraining/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.25" />
       </map>
     </option>
   </component>

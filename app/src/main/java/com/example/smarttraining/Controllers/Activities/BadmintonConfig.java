@@ -5,6 +5,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -27,6 +28,7 @@ public class BadmintonConfig extends AppCompatActivity {
     @BindView (R.id.badminton_config_set) Button nb_set_gagnant;
     @BindView (R.id.badminton_config_point) Button nb_point;
     @BindView (R.id.badminton_config_point_max) Button nb_point_max;
+    @BindView (R.id.badminton_config_play) Button play;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +74,14 @@ public class BadmintonConfig extends AppCompatActivity {
         nb_point.setOnClickListener(v -> SetNbPicker(nb_point,30));
 
         nb_point_max.setOnClickListener(v -> SetNbPicker(nb_point_max,30));
+
+        play.setOnClickListener(view -> {
+            Intent otherActivity = new Intent(BadmintonConfig.this, BadmintonMatch.class);
+            otherActivity.putExtra("nb_set_gagnant",Integer.parseInt(nb_set_gagnant.getText().toString()));
+            otherActivity.putExtra("nb_point",Integer.parseInt(nb_point.getText().toString()));
+            otherActivity.putExtra("nb_point_max",Integer.parseInt(nb_point_max.getText().toString()));
+            startActivity(otherActivity);
+        });
     }
 
     private void SetNbPicker(Button button, int max) {

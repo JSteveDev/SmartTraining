@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- TextViews -->
+    <!-- Sports TextViews -->
     <dimen name="size_sport_arbritation">30sp</dimen>
     <dimen name="size_sport_history">20sp</dimen>
     <dimen name="padding_sport">10dp</dimen>
 
-    <!-- ImageViews -->
-    <dimen name="size_image_sport">200dip</dimen>
-
-    <!-- CardViews -->
+    <!-- Sports CardViews -->
     <dimen name="size_cardview_margin">5dip</dimen>
     <dimen name="size_cardview_radius">5dip</dimen>
     <dimen name="size_cardview_elevation">5dip</dimen>
 
+    <!-- Sports Config -->
+    <dimen name="config_padding_scrollview">10dip</dimen>
+    <dimen name="config_padding">8dip</dimen>
+    <dimen name="config_textsize">18sp</dimen>
 
+    <!-- History Adapters -->
+    <dimen name="adapter_cardview_margin">5dip</dimen>
+    <dimen name="adapter_cardview_radius">5dip</dimen>
+    <dimen name="adapter_cardview_elevation">5dip</dimen>
+    <dimen name="adapter_text_padding">5dip</dimen>
+
+    <!-- Scroller -->
+    <dimen name="scroller_padding">10dip</dimen>
 
 </resources>

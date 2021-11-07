@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
 		this.configureBottomView();
 		this.configureToolbar();
 
-		/*
+
 
 		dataBase = RoomDBHistory.getInstance(this);
 
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
 		dataBase.volleyballDao().insertItem(new Volleyball("Henry", "Pierre",
 				"Nantes", "Paris Saint Germain",0,2, 5, 25, 30));
 
-		*/
+
 	}
 
 	private void configureBottomView() {

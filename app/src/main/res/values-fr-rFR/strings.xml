@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">SmartTraining</string>
-    <string name="arbitration_title">Arbitrage</string>
-    <string name="bottom_navigation_menu_arbitration">Arbitrage</string>
-    <string name="bottom_navigation_menu_history">Historique</string>
-    <string name="history_title">Historique</string>
-</resources>

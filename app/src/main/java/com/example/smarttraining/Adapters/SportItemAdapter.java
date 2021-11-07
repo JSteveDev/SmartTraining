@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.smarttraining.Controllers.Activities.BadmintonConfig;
@@ -45,7 +46,7 @@ public class SportItemAdapter extends RecyclerView.Adapter<SportItemAdapter.Item
         int resImage = context.getResources().getIdentifier(String.valueOf(sportImageList[position]), "drawable", context.getPackageName());
         holder.sportImage.setImageResource(resImage);
 
-        holder.sportImage.setOnClickListener(new View.OnClickListener() {
+        holder.sportCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 context.startActivity(new Intent(context, BadmintonConfig.class));
@@ -64,7 +65,8 @@ public class SportItemAdapter extends RecyclerView.Adapter<SportItemAdapter.Item
         TextView sportName;
         @BindView(R.id.fragment_sport_item_image)
         ImageView sportImage;
-
+        @BindView(R.id.fragment_sport_item_cardview)
+        CardView sportCardView;
 
         public ItemViewHolder(@NonNull View itemView) {
             super(itemView);

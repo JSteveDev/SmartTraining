@@ -13,10 +13,10 @@
         android:id="@+id/activity_history_tablayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tabSelectedTextColor="@color/selectedItem"
-        app:tabTextColor="@color/unselectedItem"
+        android:layout_below="@+id/toolbar"
         android:background="@color/primaryColor"
-        android:layout_below="@+id/toolbar" />
+        app:tabSelectedTextColor="@color/selectedItem"
+        app:tabTextColor="@color/unselectedItem" />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/activity_history_viewpager"
@@ -33,6 +33,7 @@
         android:background="@color/primaryColor"
         app:itemIconTint="@drawable/bottom_navigation_colors"
         app:itemTextColor="@drawable/bottom_navigation_colors"
+        app:labelVisibilityMode="unlabeled"
         app:menu="@menu/bottom_navigation_menu" />
 
 </RelativeLayout>

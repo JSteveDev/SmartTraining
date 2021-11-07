@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="@dimen/size_cardview_margin"
-    android:layout_marginTop="@dimen/size_cardview_margin"
-    android:layout_marginRight="@dimen/size_cardview_margin"
+    android:layout_marginLeft="@dimen/adapter_cardview_margin"
+    android:layout_marginTop="@dimen/adapter_cardview_margin"
+    android:layout_marginRight="@dimen/adapter_cardview_margin"
     app:cardBackgroundColor="@color/secondaryColor"
-    app:cardCornerRadius="@dimen/size_cardview_radius"
-    app:cardElevation="@dimen/size_cardview_elevation"
+    app:cardCornerRadius="@dimen/adapter_cardview_radius"
+    app:cardElevation="@dimen/adapter_cardview_elevation"
     app:cardUseCompatPadding="true">
 
     <LinearLayout
@@ -28,8 +28,8 @@
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 app:fontName="Roboto_Bold"
-                android:padding="5dp"
-                android:text="Date"
+                android:padding="@dimen/adapter_text_padding"
+                android:text="@string/adapter_date"
                 android:textColor="@color/primaryTextColor" />
 
             <ImageView
@@ -64,14 +64,14 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="Equipe_1"
+                        android:text="@string/team_1"
                         android:textColor="@color/primaryTextColor" />
 
                     <com.example.smarttraining.Views.TextViewRoboto
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Vs"
+                        android:text="@string/VS"
                         android:textColor="@color/primaryTextColor" />
 
                     <com.example.smarttraining.Views.TextViewRoboto
@@ -80,7 +80,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="Equipe_2"
+                        android:text="@string/team_2"
                         android:textColor="@color/primaryTextColor" />
                 </LinearLayout>
 
@@ -97,7 +97,7 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         app:fontName="Roboto_Thin"
-                        android:text="Capitaine_1"
+                        android:text="@string/captain_1"
                         android:textColor="@color/primaryTextColor" />
 
                     <com.example.smarttraining.Views.TextViewRoboto
@@ -107,7 +107,7 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         app:fontName="Roboto_Thin"
-                        android:text="Capitaine_2"
+                        android:text="@string/captain_2"
                         android:textColor="@color/primaryTextColor" />
 
                 </LinearLayout>
@@ -121,14 +121,10 @@
                 android:layout_gravity="center"
                 android:layout_weight="8"
                 android:gravity="center"
-                android:text="Score du match"
+                android:text="@string/match_score"
                 android:textColor="@color/primaryTextColor" />
 
         </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp" />
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>

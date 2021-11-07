@@ -36,7 +36,7 @@ public class SportsFragment extends BaseFragment {
 
 	private void configureRecyclerView() {
 
-		this.recyclerView.setAdapter(new SportItemAdapter(getResources().getStringArray(R.array.sportNameList), getResources().getStringArray(R.array.sportImageList)));
+		this.recyclerView.setAdapter(new SportItemAdapter(getResources().getStringArray(R.array.sportNameList), getResources().getStringArray(R.array.sportIconList)));
 	}
 
 }

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroundColor"
+    android:background="@color/secondaryColor"
     android:orientation="vertical">
 
     <include
@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
-        android:padding="@dimen/padding_sport">
+        android:padding="@dimen/config_padding_scrollview">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -26,23 +26,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:paddingTop="@dimen/padding_sport"
-                android:paddingBottom="@dimen/padding_sport">
+                android:paddingTop="@dimen/config_padding"
+                android:paddingBottom="@dimen/config_padding">
 
                 <com.example.smarttraining.Views.TextViewRoboto
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="8"
-                    android:text="Mode de jeu"
-                    android:textColor="@color/primaryTextColor" />
+                    android:text="@string/game_mode"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/config_textsize" />
 
                 <Button
                     android:id="@+id/badminton_config_mode_jeu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/custom_button_white_border"
-                    android:text="SIMPLE"
+                    android:text="@string/game_mode_item"
                     android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/config_textsize"
                     app:backgroundTint="@color/white" />
 
             </LinearLayout>
@@ -51,23 +53,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:paddingTop="@dimen/padding_sport"
-                android:paddingBottom="@dimen/padding_sport">
+                android:paddingTop="@dimen/config_padding"
+                android:paddingBottom="@dimen/config_padding">
 
                 <com.example.smarttraining.Views.TextViewRoboto
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="8"
-                    android:text="Sets gagnants"
-                    android:textColor="@color/primaryTextColor" />
+                    android:text="@string/set_number"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/config_textsize" />
 
                 <Button
                     android:id="@+id/badminton_config_set"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/custom_button_white_border"
-                    android:text="2"
+                    android:text="@string/set_number_value"
                     android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/config_textsize"
                     app:backgroundTint="@color/white" />
 
             </LinearLayout>
@@ -76,23 +80,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:paddingTop="@dimen/padding_sport"
-                android:paddingBottom="@dimen/padding_sport">
+                android:paddingTop="@dimen/config_padding"
+                android:paddingBottom="@dimen/config_padding">
 
                 <com.example.smarttraining.Views.TextViewRoboto
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="8"
-                    android:text="Point par set"
-                    android:textColor="@color/primaryTextColor" />
+                    android:text="@string/set_point"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/config_textsize" />
 
                 <Button
                     android:id="@+id/badminton_config_point"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/custom_button_white_border"
-                    android:text="21"
+                    android:text="@string/set_point_value"
                     android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/config_textsize"
                     app:backgroundTint="@color/white" />
 
             </LinearLayout>
@@ -102,23 +108,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:paddingTop="@dimen/padding_sport"
-                android:paddingBottom="@dimen/padding_sport">
+                android:paddingTop="@dimen/config_padding"
+                android:paddingBottom="@dimen/config_padding">
 
                 <com.example.smarttraining.Views.TextViewRoboto
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="8"
-                    android:text="Point maximum"
-                    android:textColor="@color/primaryTextColor" />
+                    android:text="@string/set_point_max"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/config_textsize" />
 
                 <Button
                     android:id="@+id/badminton_config_point_max"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/custom_button_white_border"
-                    android:text="25"
+                    android:text="@string/set_point_max_value"
                     android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/config_textsize"
                     app:backgroundTint="@color/white" />
 
             </LinearLayout>
@@ -126,54 +134,57 @@
             <com.example.smarttraining.Views.TextViewRoboto
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/padding_sport"
-                android:text="Equipe 1 :"
-                android:textColor="@color/primaryTextColor" />
+                android:layout_margin="@dimen/config_padding"
+                android:text="@string/team_1"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/config_textsize" />
 
             <EditText
                 android:id="@+id/badminton_config_eq1_j1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Joueur 1"
-                android:textColor="@color/primaryTextColor" />
+                android:hint="@string/player_1"
+                android:textSize="@dimen/config_textsize" />
 
             <EditText
                 android:id="@+id/badminton_config_eq1_j2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Joueur 2"
-                android:textColor="@color/primaryTextColor" />
+                android:hint="@string/player_2"
+                android:textSize="@dimen/config_textsize" />
 
             <com.example.smarttraining.Views.TextViewRoboto
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/padding_sport"
-                android:text="Equipe 2 :"
-                android:textColor="@color/primaryTextColor" />
+                android:layout_margin="@dimen/config_padding"
+                android:text="@string/team_2"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/config_textsize" />
 
             <EditText
                 android:id="@+id/badminton_config_eq2_j1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Joueur 1"
-                android:textColor="@color/primaryTextColor" />
+                android:hint="@string/player_1"
+                android:textSize="@dimen/config_textsize" />
 
             <EditText
                 android:id="@+id/badminton_config_eq2_j2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Joueur 2"
-                android:textColor="@color/primaryTextColor" />
+                android:hint="@string/player_2"
+                android:textSize="@dimen/config_textsize" />
 
             <Button
                 android:id="@+id/badminton_config_play"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_margin="@dimen/padding_sport"
+                android:layout_margin="@dimen/config_padding"
                 android:background="@drawable/custom_button_white_border"
-                android:text="Jouer"
+                android:text="@string/play_button"
                 android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/config_textsize"
                 app:backgroundTint="@color/white" />
 
         </LinearLayout>

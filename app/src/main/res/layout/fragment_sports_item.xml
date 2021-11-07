@@ -1,38 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginLeft="@dimen/size_cardview_margin"
     android:layout_marginTop="@dimen/size_cardview_margin"
     android:layout_marginRight="@dimen/size_cardview_margin"
+    app:cardBackgroundColor="@color/secondaryColor"
     app:cardCornerRadius="@dimen/size_cardview_radius"
     app:cardElevation="@dimen/size_cardview_elevation"
-    app:cardBackgroundColor="@color/secondaryColor"
+    android:id="@+id/fragment_sport_item_cardview"
     app:cardUseCompatPadding="true">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="70dip"
+        android:orientation="horizontal">
 
         <com.example.smarttraining.Views.TextViewRoboto
             android:id="@+id/fragment_sport_item_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
             android:padding="@dimen/padding_sport"
-            app:fontName="Roboto_Medium"
-            android:textColor="@color/primaryTextColor"
-            android:textSize="@dimen/size_sport_arbritation" />
+            android:textColor="@color/secondaryTextColor"
+            android:textSize="@dimen/size_sport_arbritation"
+            app:fontName="Roboto_Medium" />
 
         <ImageView
             android:id="@+id/fragment_sport_item_image"
             android:layout_width="match_parent"
-            android:layout_below="@id/fragment_sport_item_text"
-            android:layout_height="@dimen/size_image_sport"
-            android:scaleType="centerCrop"/>
+            android:layout_margin="15dip"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:scaleType="fitCenter"
+            app:tint="@color/black" />
 
-    </RelativeLayout>
+    </LinearLayout>
 
 
 </androidx.cardview.widget.CardView>

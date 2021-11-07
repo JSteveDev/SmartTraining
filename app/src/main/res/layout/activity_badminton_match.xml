@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/secondaryColor"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:padding="@dimen/config_padding_scrollview">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.example.smarttraining.Views.TextViewRoboto
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/team_1"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="@dimen/config_textsize" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <com.example.smarttraining.Views.TextViewRoboto
+                    android:id="@+id/badminton_match_score_team_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="5"
+                    android:textColor="@color/secondaryTextColor"
+                    android:textSize="200sp" />
+
+                <com.example.smarttraining.Views.TextViewRoboto
+                    android:id="@+id/badminton_score_team_1_set"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="2"
+                    android:textColor="@color/secondaryTextColor"
+                    android:textSize="100sp" />
+
+            </RelativeLayout>
+
+            <com.example.smarttraining.Views.TextViewRoboto
+                android:id="@+id/badminton_timer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="100sp"
+                android:textColor="@color/secondaryTextColor"
+                android:text="00:00" />
+
+            <com.example.smarttraining.Views.TextViewRoboto
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/team_2"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="@dimen/config_textsize" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <com.example.smarttraining.Views.TextViewRoboto
+                    android:id="@+id/badminton_match_score_team_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="5"
+                    android:textColor="@color/secondaryTextColor"
+                    android:textSize="200sp" />
+
+                <com.example.smarttraining.Views.TextViewRoboto
+                    android:id="@+id/badminton_score_team_2_set"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="2"
+                    android:textColor="@color/secondaryTextColor"
+                    android:textSize="100sp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
