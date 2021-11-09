@@ -1,7 +1,9 @@
 package com.example.smarttraining.Controllers.Activities;
 
 import android.os.Bundle;
+import android.text.Layout;
 import android.view.View;
+import android.view.ViewStub;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -205,30 +207,70 @@ public class BadmintonMatch extends AppCompatActivity {
         final Button Save_Button = view.findViewById(R.id.save_dialog_Save);
         final Button Exit_Button = view.findViewById(R.id.save_dialog_Exit);
 
+        ViewStub layout = view.findViewById(R.id.sports_details);
+        layout.setLayoutResource(R.layout.badminton_details);
+        layout.inflate();
+
         TextView winner_declaration = view.findViewById(R.id.badminton_details_winner_declaration);
         TextView set_details = view.findViewById(R.id.badminton_details_set_value);
 
         switch (game_mode){
+
             case "SIMPLE":
+                String player1 = getResources().getString(R.string.player_1);
+                String player2 = getResources().getString(R.string.player_2);
                 if (set_team1 >= nb_set_gagnant) {
-                    winner_declaration.setText(getResources().getString(R.string.badminton_winner_declaration_simple, teamsMembers[0][0], set_team1, set_team2));
+                    if (teamsMembers[0][0].isEmpty()){
+                        winner_declaration.setText(getResources().getString(R.string.badminton_winner_declaration_simple, player1, set_team1, set_team2));
+                    } else {
+                        winner_declaration.setText(getResources().getString(R.string.badminton_winner_declaration_simple, teamsMembers[0][0], set_team1, set_team2));
+                    }
                 } else {
+                    if (teamsMembers[1][0].isEmpty()){
+                        winner_declaration.setText(getResources().getString(R.string.badminton_winner_declaration_simple, player2, set_team2, set_team1));
+                    }
                     winner_declaration.setText(getResources().getString(R.string.badminton_winner_declaration_simple, teamsMembers[1][0], set_team2, set_team1));
                 }
                 break;
+
             case "DOUBLE":
                 if (set_team1 >= nb_set_gagnant) {
                     if (team1Name.getText().toString().split("\\s+").length == 3){
                         winner_declaration.setText(getResources().getString(R.string.badminton_winner_declaration_double, teamsMembers[0][0], teamsMembers[0][1], set_team1, set_team2));
                     } else {
-                        winner_declaration.setText(getResources().getString(R.string.badminton_winner_declaration_simple, teamsMembers[0][0], set_team1, set_team1));
+                        String members;
+
+                        if (teamsMembers[0][0].isEmpty()) {
+                            if (teamsMembers[0][1].isEmpty()){
+                                members = getResources().getString(R.string.player_1);
+                            } else {
+                                members = teamsMembers[0][1];
+                            }
+                        } else {
+                            members = teamsMembers[0][0];
+                        }
+
+                        winner_declaration.setText(getResources().getString(R.string.badminton_winner_declaration_simple, members, set_team1, set_team2));
+
                     }
 
                 } else {
                     if (team2Name.getText().toString().split("\\s+").length == 3){
                         winner_declaration.setText(getResources().getString(R.string.badminton_winner_declaration_double, teamsMembers[1][0], teamsMembers[1][1], set_team2, set_team1));
                     } else {
-                        winner_declaration.setText(getResources().getString(R.string.badminton_winner_declaration_simple, teamsMembers[1][0], set_team2, set_team1));
+                        String members;
+
+                        if (teamsMembers[1][0].isEmpty()) {
+                            if (teamsMembers[1][1].isEmpty()){
+                                members = getResources().getString(R.string.player_2);
+                            } else {
+                                members = teamsMembers[1][1];
+                            }
+                        } else {
+                            members = teamsMembers[1][0];
+                        }
+
+                        winner_declaration.setText(getResources().getString(R.string.badminton_winner_declaration_simple, members, set_team2, set_team1));
                     }
                 }
                 break;

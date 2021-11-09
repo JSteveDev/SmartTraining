@@ -17,11 +17,10 @@
         android:textColor="@color/primaryTextColor"
         android:textSize="@dimen/save_dialog_text_size" />
 
-    <include
+    <ViewStub
         android:id="@+id/sports_details"
-        layout="@layout/badminton_details"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent" />
 
     <com.example.smarttraining.Views.TextViewRoboto
         android:id="@+id/badminton_details_save_question"
