@@ -41,11 +41,11 @@
                     android:id="@+id/badminton_config_mode_jeu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/custom_button_white_border"
+                    android:background="@drawable/custom_button_black_border"
                     android:text="@string/game_mode_item"
                     android:textColor="@color/primaryTextColor"
                     android:textSize="@dimen/config_textsize"
-                    app:backgroundTint="@color/white" />
+                    app:backgroundTint="@color/black" />
 
             </LinearLayout>
 
@@ -68,11 +68,11 @@
                     android:id="@+id/badminton_config_set"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/custom_button_white_border"
+                    android:background="@drawable/custom_button_black_border"
                     android:text="@string/set_number_value"
                     android:textColor="@color/primaryTextColor"
                     android:textSize="@dimen/config_textsize"
-                    app:backgroundTint="@color/white" />
+                    app:backgroundTint="@color/black" />
 
             </LinearLayout>
 
@@ -95,11 +95,11 @@
                     android:id="@+id/badminton_config_point"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/custom_button_white_border"
+                    android:background="@drawable/custom_button_black_border"
                     android:text="@string/set_point_value"
                     android:textColor="@color/primaryTextColor"
                     android:textSize="@dimen/config_textsize"
-                    app:backgroundTint="@color/white" />
+                    app:backgroundTint="@color/black" />
 
             </LinearLayout>
 
@@ -123,11 +123,11 @@
                     android:id="@+id/badminton_config_point_max"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/custom_button_white_border"
+                    android:background="@drawable/custom_button_black_border"
                     android:text="@string/set_point_max_value"
                     android:textColor="@color/primaryTextColor"
                     android:textSize="@dimen/config_textsize"
-                    app:backgroundTint="@color/white" />
+                    app:backgroundTint="@color/black" />
 
             </LinearLayout>
 
@@ -144,6 +144,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/player_1"
+                android:textColor="@color/primaryTextColor"
+                android:textColorHint="@color/primaryTextColor"
                 android:textSize="@dimen/config_textsize" />
 
             <EditText
@@ -151,6 +153,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/player_2"
+                android:textColor="@color/primaryTextColor"
+                android:textColorHint="@color/primaryTextColor"
                 android:textSize="@dimen/config_textsize" />
 
             <com.example.smarttraining.Views.TextViewRoboto
@@ -166,6 +170,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/player_1"
+                android:textColor="@color/primaryTextColor"
+                android:textColorHint="@color/primaryTextColor"
                 android:textSize="@dimen/config_textsize" />
 
             <EditText
@@ -173,6 +179,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/player_2"
+                android:textColor="@color/primaryTextColor"
+                android:textColorHint="@color/primaryTextColor"
                 android:textSize="@dimen/config_textsize" />
 
             <Button
@@ -181,11 +189,11 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="@dimen/config_padding"
-                android:background="@drawable/custom_button_white_border"
+                android:background="@drawable/custom_button_black_border"
                 android:text="@string/play_button"
                 android:textColor="@color/primaryTextColor"
                 android:textSize="@dimen/config_textsize"
-                app:backgroundTint="@color/white" />
+                app:backgroundTint="@color/black" />
 
         </LinearLayout>
 

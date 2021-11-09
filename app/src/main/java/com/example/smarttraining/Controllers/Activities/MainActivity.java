@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 		this.configureToolbar();
 
 
-
+/*
 		dataBase = RoomDBHistory.getInstance(this);
 
 		dataBase.handballDao().insertItem(new Handball("Maximilien", "Augustin",
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
 		dataBase.volleyballDao().insertItem(new Volleyball("Henry", "Pierre",
 				"Nantes", "Paris Saint Germain",0,2, 5, 25, 30));
-
+*/
 
 	}
 

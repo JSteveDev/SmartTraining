@@ -13,7 +13,6 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.smarttraining.Controllers.Activities.BadmintonConfig;
-import com.example.smarttraining.Controllers.Activities.HistoryActivity;
 import com.example.smarttraining.R;
 
 import butterknife.BindView;
@@ -46,12 +45,7 @@ public class SportItemAdapter extends RecyclerView.Adapter<SportItemAdapter.Item
         int resImage = context.getResources().getIdentifier(String.valueOf(sportImageList[position]), "drawable", context.getPackageName());
         holder.sportImage.setImageResource(resImage);
 
-        holder.sportCardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                context.startActivity(new Intent(context, BadmintonConfig.class));
-            }
-        });
+        holder.sportCardView.setOnClickListener(view -> context.startActivity(new Intent(context, BadmintonConfig.class)));
     }
 
     @Override

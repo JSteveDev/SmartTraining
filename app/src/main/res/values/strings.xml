@@ -76,8 +76,18 @@
     <string name="captain_1">Capitaine_1</string>
     <string name="captain_2">Capitaine_2</string>
     <string name="match_score">Score du match</string>
-    <string name="period">Period : 30 minutes</string>
-    <string name="TM_period">Durée du Temps Mort :</string>
-    <string name="undefined_score">-/-</string>
+    <string name="period">Period : %1$d min</string>
+    <string name="TM_period">Durée du Temps Mort : %1$d min</string>
+    <string name="undefined_score">%1$s/%2$s</string>
+    <string name="nb_set_gagnant">Nombre de set gagnant : %1$d</string>
+    <string name="point_par_set_historique">Point par set : %1$d</string>
+    <string name="point_max_par_set">Point max par set : %1$d</string>
+    <string name="simple_mode">SIMPLE</string>
+    <string name="double_mode">DOUBLE</string>
+    <string name="zero">0</string>
+    <string name="chronometer_init">00:00</string>
+    <string name="non">Non</string>
+    <string name="oui">Oui</string>
+    <string name="end_match">Fin du match !</string>
 
 </resources>

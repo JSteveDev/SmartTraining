@@ -1,7 +1,6 @@
 package com.example.smarttraining.Adapters;
 
 import android.app.Activity;
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -49,28 +48,23 @@ public class HandballAdapter extends RecyclerView.Adapter<HandballAdapter.ItemVi
 		holder.equipe2.setText(data.getTeamName2());
 		holder.capitaine1.setText(data.getCaptain1());
 		holder.capitaine2.setText(data.getCaptain2());
-		holder.period.setText("Period : " + data.getPeriod() + " minutes");
-		holder.score.setText(data.getScore1() + " - " + data.getScore2());
+		holder.period.setText(context.getResources().getString(R.string.period, data.getPeriod()));
+		holder.score.setText(context.getResources().getString(R.string.undefined_score, String.valueOf(data.getScore1()), String.valueOf(data.getScore2())));
 
-		holder.deleteButton.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View view) {
-				Handball d = dataList.get(holder.getAdapterPosition());
-				database.handballDao().deleteItem(d);
-				int position = holder.getAdapterPosition();
-				dataList.remove(position);
-				notifyItemRemoved(position);
-				notifyItemRangeChanged(position, dataList.size());
-			}
+		holder.deleteButton.setOnClickListener(view -> {
+			Handball d = dataList.get(holder.getAdapterPosition());
+			database.handballDao().deleteItem(d);
+			int position1 = holder.getAdapterPosition();
+			dataList.remove(position1);
+			notifyItemRemoved(position1);
+			notifyItemRangeChanged(position1, dataList.size());
 		});
 	}
 
 	@Override
 	public int getItemCount() { return dataList.size(); }
 
-
 	// --- ItemViewHolder ---
-
 
 	public class ItemViewHolder extends RecyclerView.ViewHolder {
 
@@ -88,6 +82,5 @@ public class HandballAdapter extends RecyclerView.Adapter<HandballAdapter.ItemVi
 			ButterKnife.bind(this, itemView);
 		}
 	}
-
 }
 

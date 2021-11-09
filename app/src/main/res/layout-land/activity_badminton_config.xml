@@ -45,18 +45,18 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="8"
                             android:text="@string/game_mode"
-                            android:textSize="@dimen/config_textsize"
-                            android:textColor="@color/primaryTextColor" />
+                            android:textColor="@color/primaryTextColor"
+                            android:textSize="@dimen/config_textsize" />
 
                         <Button
                             android:id="@+id/badminton_config_mode_jeu"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/custom_button_white_border"
+                            android:background="@drawable/custom_button_black_border"
                             android:text="@string/game_mode_item"
-                            android:textSize="@dimen/config_textsize"
                             android:textColor="@color/primaryTextColor"
-                            app:backgroundTint="@color/white" />
+                            android:textSize="@dimen/config_textsize"
+                            app:backgroundTint="@color/black" />
 
                     </LinearLayout>
 
@@ -72,18 +72,18 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="8"
                             android:text="@string/set_number"
-                            android:textSize="@dimen/config_textsize"
-                            android:textColor="@color/primaryTextColor" />
+                            android:textColor="@color/primaryTextColor"
+                            android:textSize="@dimen/config_textsize" />
 
                         <Button
                             android:id="@+id/badminton_config_set"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/custom_button_white_border"
+                            android:background="@drawable/custom_button_black_border"
                             android:text="@string/set_number_value"
-                            android:textSize="@dimen/config_textsize"
                             android:textColor="@color/primaryTextColor"
-                            app:backgroundTint="@color/white" />
+                            android:textSize="@dimen/config_textsize"
+                            app:backgroundTint="@color/black" />
 
                     </LinearLayout>
 
@@ -99,18 +99,18 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="8"
                             android:text="@string/set_point"
-                            android:textSize="@dimen/config_textsize"
-                            android:textColor="@color/primaryTextColor" />
+                            android:textColor="@color/primaryTextColor"
+                            android:textSize="@dimen/config_textsize" />
 
                         <Button
                             android:id="@+id/badminton_config_point"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/custom_button_white_border"
+                            android:background="@drawable/custom_button_black_border"
                             android:text="@string/set_point_value"
-                            android:textSize="@dimen/config_textsize"
                             android:textColor="@color/primaryTextColor"
-                            app:backgroundTint="@color/white" />
+                            android:textSize="@dimen/config_textsize"
+                            app:backgroundTint="@color/black" />
 
                     </LinearLayout>
 
@@ -126,18 +126,18 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="8"
                             android:text="@string/set_point_max"
-                            android:textSize="@dimen/config_textsize"
-                            android:textColor="@color/primaryTextColor" />
+                            android:textColor="@color/primaryTextColor"
+                            android:textSize="@dimen/config_textsize" />
 
                         <Button
                             android:id="@+id/badminton_config_point_max"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/custom_button_white_border"
+                            android:background="@drawable/custom_button_black_border"
                             android:text="@string/set_point_max_value"
-                            android:textSize="@dimen/config_textsize"
                             android:textColor="@color/primaryTextColor"
-                            app:backgroundTint="@color/white" />
+                            android:textSize="@dimen/config_textsize"
+                            app:backgroundTint="@color/black" />
 
                     </LinearLayout>
 
@@ -155,8 +155,8 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/config_padding"
                         android:text="@string/team_1"
-                        android:textSize="@dimen/config_textsize"
-                        android:textColor="@color/primaryTextColor" />
+                        android:textColor="@color/primaryTextColor"
+                        android:textSize="@dimen/config_textsize" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -170,17 +170,19 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:hint="@string/player_1"
-                            android:textSize="@dimen/config_textsize"
-                            android:textColor="@color/primaryTextColor" />
+                            android:textColor="@color/primaryTextColor"
+                            android:textColorHint="@color/primaryTextColor"
+                            android:textSize="@dimen/config_textsize" />
 
                         <EditText
                             android:id="@+id/badminton_config_eq1_j2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textSize="@dimen/config_textsize"
                             android:layout_weight="1"
                             android:hint="@string/player_2"
-                            android:textColor="@color/primaryTextColor" />
+                            android:textColor="@color/primaryTextColor"
+                            android:textColorHint="@color/primaryTextColor"
+                            android:textSize="@dimen/config_textsize" />
 
                         <com.example.smarttraining.Views.TextViewRoboto
                             android:layout_width="match_parent"
@@ -188,8 +190,8 @@
                             android:layout_margin="@dimen/config_padding"
                             android:layout_weight="3"
                             android:text="@string/team_2"
-                            android:textSize="@dimen/config_textsize"
-                            android:textColor="@color/primaryTextColor" />
+                            android:textColor="@color/primaryTextColor"
+                            android:textSize="@dimen/config_textsize" />
 
                         <EditText
                             android:id="@+id/badminton_config_eq2_j1"
@@ -197,8 +199,9 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:hint="@string/player_1"
-                            android:textSize="@dimen/config_textsize"
-                            android:textColor="@color/primaryTextColor" />
+                            android:textColor="@color/primaryTextColor"
+                            android:textColorHint="@color/primaryTextColor"
+                            android:textSize="@dimen/config_textsize" />
 
                         <EditText
                             android:id="@+id/badminton_config_eq2_j2"
@@ -206,8 +209,9 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:hint="@string/player_2"
-                            android:textSize="@dimen/config_textsize"
-                            android:textColor="@color/primaryTextColor" />
+                            android:textColor="@color/primaryTextColor"
+                            android:textColorHint="@color/primaryTextColor"
+                            android:textSize="@dimen/config_textsize" />
 
                     </LinearLayout>
 
@@ -222,11 +226,11 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="@dimen/config_padding"
                 android:layout_weight="1"
-                android:background="@drawable/custom_button_white_border"
+                android:background="@drawable/custom_button_black_border"
                 android:text="@string/play_button"
-                android:textSize="@dimen/config_textsize"
                 android:textColor="@color/primaryTextColor"
-                app:backgroundTint="@color/white" />
+                android:textSize="@dimen/config_textsize"
+                app:backgroundTint="@color/black" />
 
         </LinearLayout>
     </ScrollView>

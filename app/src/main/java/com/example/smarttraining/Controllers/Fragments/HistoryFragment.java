@@ -7,11 +7,13 @@ import android.widget.Toast;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.room.Room;
 
+import com.example.smarttraining.Adapters.BadmintonAdapter;
 import com.example.smarttraining.Adapters.BasketballAdapter;
 import com.example.smarttraining.Adapters.FutsalAdapter;
 import com.example.smarttraining.Adapters.HandballAdapter;
 import com.example.smarttraining.Adapters.UltimateAdapter;
 import com.example.smarttraining.Adapters.VolleyballAdapter;
+import com.example.smarttraining.Models.Historique.Badminton;
 import com.example.smarttraining.Models.Historique.RoomDBHistory;
 import com.example.smarttraining.R;
 
@@ -64,6 +66,7 @@ public class HistoryFragment extends BaseFragment {
 
         switch (position){
             case 0: // Badminton
+                this.recyclerView.setAdapter(new BadmintonAdapter(getActivity(),  dataBase.badmintonDao().getItems()));
                 break;
             case 1: // Basket-ball
                 this.recyclerView.setAdapter(new BasketballAdapter(getActivity(),  dataBase.basketBallDao().getItems()));

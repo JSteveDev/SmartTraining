@@ -27,10 +27,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="1"
-                app:fontName="Roboto_Bold"
                 android:padding="@dimen/adapter_text_padding"
                 android:text="@string/adapter_date"
-                android:textColor="@color/primaryTextColor" />
+                android:textColor="@color/primaryTextColor"
+                app:fontName="Roboto_Bold" />
 
             <ImageView
                 android:id="@+id/ultimate_delete_ic"
@@ -38,7 +38,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="4"
                 android:scaleType="center"
-                android:src="@drawable/ic_delete_white_24" />
+                android:src="@drawable/ic_delete_white_24"
+                app:tint="@color/black" />
         </LinearLayout>
 
         <LinearLayout
@@ -55,7 +56,6 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
                     android:orientation="horizontal">
 
                     <com.example.smarttraining.Views.TextViewRoboto
@@ -87,7 +87,6 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
                     android:orientation="horizontal">
 
                     <com.example.smarttraining.Views.TextViewRoboto
@@ -96,9 +95,9 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        app:fontName="Roboto_Thin"
                         android:text="@string/captain_1"
-                        android:textColor="@color/primaryTextColor" />
+                        android:textColor="@color/primaryTextColor"
+                        app:fontName="Roboto_Thin" />
 
                     <com.example.smarttraining.Views.TextViewRoboto
                         android:id="@+id/ultimate_capitaine2"
@@ -106,9 +105,9 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        app:fontName="Roboto_Thin"
                         android:text="@string/captain_2"
-                        android:textColor="@color/primaryTextColor" />
+                        android:textColor="@color/primaryTextColor"
+                        app:fontName="Roboto_Thin" />
 
                 </LinearLayout>
 

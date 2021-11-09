@@ -25,10 +25,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="@dimen/scroller_padding"
-            android:background="@drawable/custom_button_white_border"
+            android:background="@drawable/custom_button_black_border"
             android:text="@string/apply"
             android:textColor="@color/primaryTextColor"
-            app:backgroundTint="@color/white" />
+            app:backgroundTint="@color/black" />
 
     </LinearLayout>
 

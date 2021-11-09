@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="@string/team_1"
-                android:textColor="@color/secondaryTextColor"
+                android:textColor="@color/primaryTextColor"
                 android:textSize="@dimen/config_textsize" />
 
             <RelativeLayout
@@ -36,8 +36,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text="0"
-                    android:textColor="@color/secondaryTextColor"
+                    android:text="@string/zero"
+                    android:textColor="@color/primaryTextColor"
                     android:textSize="200sp" />
 
                 <com.example.smarttraining.Views.TextViewRoboto
@@ -45,8 +45,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:text="0"
-                    android:textColor="@color/secondaryTextColor"
+                    android:text="@string/zero"
+                    android:textColor="@color/primaryTextColor"
                     android:textSize="100sp" />
 
             </RelativeLayout>
@@ -56,8 +56,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="00:00"
-                android:textColor="@color/secondaryTextColor"
+                android:text="@string/chronometer_init"
+                android:textColor="@color/primaryTextColor"
                 android:textSize="80sp" />
 
             <com.example.smarttraining.Views.TextViewRoboto
@@ -66,7 +66,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="@string/team_2"
-                android:textColor="@color/secondaryTextColor"
+                android:textColor="@color/primaryTextColor"
                 android:textSize="@dimen/config_textsize" />
 
             <RelativeLayout
@@ -79,8 +79,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text="0"
-                    android:textColor="@color/secondaryTextColor"
+                    android:text="@string/zero"
+                    android:textColor="@color/primaryTextColor"
                     android:textSize="200sp" />
 
                 <com.example.smarttraining.Views.TextViewRoboto
@@ -88,8 +88,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:text="0"
-                    android:textColor="@color/secondaryTextColor"
+                    android:text="@string/zero"
+                    android:textColor="@color/primaryTextColor"
                     android:textSize="100sp" />
 
             </RelativeLayout>
@@ -106,7 +106,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="@string/undefined_score"
-                    android:textColor="@color/secondaryTextColor"
+                    android:textColor="@color/primaryTextColor"
                     android:textSize="@dimen/config_textsize" />
 
                 <com.example.smarttraining.Views.TextViewRoboto
@@ -116,7 +116,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="@string/undefined_score"
-                    android:textColor="@color/secondaryTextColor"
+                    android:textColor="@color/primaryTextColor"
                     android:textSize="@dimen/config_textsize" />
 
                 <com.example.smarttraining.Views.TextViewRoboto
@@ -126,7 +126,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="@string/undefined_score"
-                    android:textColor="@color/secondaryTextColor"
+                    android:textColor="@color/primaryTextColor"
                     android:textSize="@dimen/config_textsize" />
             </LinearLayout>
 

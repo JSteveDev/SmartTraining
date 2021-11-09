@@ -24,7 +24,7 @@
             android:layout_weight="1"
             android:gravity="center_vertical"
             android:padding="@dimen/padding_sport"
-            android:textColor="@color/secondaryTextColor"
+            android:textColor="@color/primaryTextColor"
             android:textSize="@dimen/size_sport_arbritation"
             app:fontName="Roboto_Medium" />
 

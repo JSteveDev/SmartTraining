@@ -11,7 +11,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.smarttraining.Models.Historique.BasketBall;
-import com.example.smarttraining.Models.Historique.Handball;
 import com.example.smarttraining.Models.Historique.RoomDBHistory;
 import com.example.smarttraining.R;
 
@@ -49,19 +48,16 @@ public class BasketballAdapter extends RecyclerView.Adapter<BasketballAdapter.It
 		holder.equipe2.setText(data.getTeamName2());
 		holder.capitaine1.setText(data.getCaptain1());
 		holder.capitaine2.setText(data.getCaptain2());
-		holder.period.setText("Period : " + data.getPeriod() + " minutes");
-		holder.score.setText(data.getScore1() + " - " + data.getScore2());
+		holder.period.setText(context.getResources().getString(R.string.period, data.getPeriod()));
+		holder.score.setText(context.getResources().getString(R.string.undefined_score, String.valueOf(data.getScore1()), String.valueOf(data.getScore2())));
 
-		holder.deleteButton.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View view) {
-				BasketBall d = dataList.get(holder.getAdapterPosition());
-				database.basketBallDao().deleteItem(d);
-				int position = holder.getAdapterPosition();
-				dataList.remove(position);
-				notifyItemRemoved(position);
-				notifyItemRangeChanged(position, dataList.size());
-			}
+		holder.deleteButton.setOnClickListener(view -> {
+			BasketBall d = dataList.get(holder.getAdapterPosition());
+			database.basketBallDao().deleteItem(d);
+			int position1 = holder.getAdapterPosition();
+			dataList.remove(position1);
+			notifyItemRemoved(position1);
+			notifyItemRangeChanged(position1, dataList.size());
 		});
 	}
 

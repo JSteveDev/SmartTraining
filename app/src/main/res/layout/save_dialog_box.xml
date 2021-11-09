@@ -4,48 +4,58 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="@color/secondaryColor"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="@dimen/save_dialog_padding">
+
+    <com.example.smarttraining.Views.TextViewRoboto
+        android:id="@+id/save_dialog_End_Match"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/save_dialog_padding"
+        android:text="@string/end_match"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="@dimen/save_dialog_text_size" />
+
+    <com.example.smarttraining.Views.TextViewRoboto
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/save_dialog_padding"
+        android:text="Les informations du match arrive bientôt !"
+        android:textColor="@color/primaryTextColor" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-        <com.example.smarttraining.Views.TextViewRoboto
+        <Button
+            android:id="@+id/save_dialog_Exit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/secondaryTextColor"
-            android:text="La partie est finie !\nLes informations du match arrive bientôt !"/>
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/scroller_padding"
+            android:layout_weight="1"
+            android:background="@drawable/custom_button_black_border"
+            android:text="@string/non"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="@dimen/save_dialog_text_size"
+            android:textStyle="bold"
+            app:backgroundTint="@color/black" />
 
-        <LinearLayout
+        <Button
+            android:id="@+id/save_dialog_Save"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/save_dialog_Exit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="@dimen/scroller_padding"
-                android:background="@drawable/custom_button_white_border"
-                android:text="Retour menu"
-                android:textColor="@color/primaryTextColor"
-                app:backgroundTint="@color/white" />
-
-            <Button
-                android:id="@+id/save_dialog_Save"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="@dimen/scroller_padding"
-                android:background="@drawable/custom_button_white_border"
-                android:text="Sauvegarder"
-                android:textColor="@color/primaryTextColor"
-                app:backgroundTint="@color/white" />
-
-        </LinearLayout>
-
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/scroller_padding"
+            android:layout_weight="1"
+            android:background="@drawable/custom_button_black_border"
+            android:text="@string/oui"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="@dimen/save_dialog_text_size"
+            android:textStyle="bold"
+            app:backgroundTint="@color/black" />
 
     </LinearLayout>
 

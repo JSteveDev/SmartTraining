@@ -131,7 +131,7 @@ public class BadmintonConfig extends AppCompatActivity {
                     if (joueurs_equipe2[1].getText().toString().isEmpty()){
                         teamsMembers[1] = joueurs_equipe2[0].getText().toString().trim();
                     } else {
-                        teamsMembers[1] = joueurs_equipe2[0].getText().toString().trim() + " - " + joueurs_equipe1[2].getText().toString().trim();
+                        teamsMembers[1] = joueurs_equipe2[0].getText().toString().trim() + " - " + joueurs_equipe2[1].getText().toString().trim();
                     }
                 }
                 break;
@@ -182,12 +182,12 @@ public class BadmintonConfig extends AppCompatActivity {
 
         switch (button.getText().toString()){
             case "SIMPLE":
-                button.setText("DOUBLE");
+                button.setText(R.string.simple_mode);
                 joueurs_equipe1[1].getLayoutParams().height = WindowManager.LayoutParams.WRAP_CONTENT;
                 joueurs_equipe2[1].getLayoutParams().height = WindowManager.LayoutParams.WRAP_CONTENT;
                 break;
             case "DOUBLE":
-                button.setText("SIMPLE");
+                button.setText(R.string.double_mode);
                 joueurs_equipe1[1].getLayoutParams().height = 0;
                 joueurs_equipe2[1].getLayoutParams().height = 0;
                 break;

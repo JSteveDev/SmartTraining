@@ -6,13 +6,14 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
+import com.example.smarttraining.Models.Historique.DAO.BadmintonDao;
 import com.example.smarttraining.Models.Historique.DAO.BasketBallDao;
 import com.example.smarttraining.Models.Historique.DAO.FutsalDao;
 import com.example.smarttraining.Models.Historique.DAO.HandballDao;
 import com.example.smarttraining.Models.Historique.DAO.UltimateDao;
 import com.example.smarttraining.Models.Historique.DAO.VolleyballDao;
 
-@Database(entities = {BasketBall.class,Futsal.class, Handball.class, Ultimate.class, Volleyball.class}, version = 1, exportSchema = false)
+@Database(entities = {Badminton.class, BasketBall.class,Futsal.class, Handball.class, Ultimate.class, Volleyball.class}, version = 1, exportSchema = false)
 public abstract class RoomDBHistory extends RoomDatabase {
 
     // --- SINGLETON ---
@@ -24,6 +25,7 @@ public abstract class RoomDBHistory extends RoomDatabase {
     public abstract FutsalDao futsalDao();
     public abstract UltimateDao ultimateDao();
     public abstract VolleyballDao volleyballDao();
+    public abstract BadmintonDao badmintonDao();
 
     // --- DATABASE NAME ---
     private static String DATABASE_NAME = "database.db" ;

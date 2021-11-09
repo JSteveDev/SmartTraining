@@ -25,4 +25,8 @@
     <!-- Scroller -->
     <dimen name="scroller_padding">10dip</dimen>
 
+    <!-- Save Dialog -->
+    <dimen name="save_dialog_text_size">18sp</dimen>
+    <dimen name="save_dialog_padding">10dip</dimen>
+
 </resources>

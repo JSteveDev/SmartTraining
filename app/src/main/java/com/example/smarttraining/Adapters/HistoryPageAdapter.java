@@ -7,7 +7,6 @@ import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.example.smarttraining.Controllers.Fragments.HistoryFragment;
-import com.example.smarttraining.Controllers.Fragments.SportsFragment;
 
 public class HistoryPageAdapter extends FragmentStateAdapter {
 

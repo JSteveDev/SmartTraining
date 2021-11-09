@@ -22,7 +22,7 @@
             android:orientation="horizontal">
 
             <com.example.smarttraining.Views.TextViewRoboto
-                android:id="@+id/handball_date"
+                android:id="@+id/badminton_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -33,7 +33,7 @@
                 app:fontName="Roboto_Bold" />
 
             <ImageView
-                android:id="@+id/handball_delete_ic"
+                android:id="@+id/badminton_delete_ic"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="4"
@@ -48,11 +48,12 @@
             android:orientation="horizontal">
 
             <com.example.smarttraining.Views.TextViewRoboto
-                android:id="@+id/handball_equipe1"
+                android:id="@+id/badminton_equipe1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:padding="@dimen/adapter_text_padding"
                 android:text="@string/team_1"
                 android:textColor="@color/primaryTextColor" />
 
@@ -64,11 +65,12 @@
                 android:textColor="@color/primaryTextColor" />
 
             <com.example.smarttraining.Views.TextViewRoboto
-                android:id="@+id/handball_equipe2"
+                android:id="@+id/badminton_equipe2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:padding="@dimen/adapter_text_padding"
                 android:text="@string/team_2"
                 android:textColor="@color/primaryTextColor" />
         </LinearLayout>
@@ -78,52 +80,50 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <com.example.smarttraining.Views.TextViewRoboto
-                android:id="@+id/handball_capitaine1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/captain_1"
-                android:textColor="@color/primaryTextColor"
-                app:fontName="Roboto_Thin" />
-
-            <com.example.smarttraining.Views.TextViewRoboto
-                android:id="@+id/handball_capitaine2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/captain_2"
-                android:textColor="@color/primaryTextColor"
-                app:fontName="Roboto_Thin" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <com.example.smarttraining.Views.TextViewRoboto
-                android:id="@+id/handball_period"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:paddingStart="@dimen/adapter_text_padding"
-                android:paddingEnd="@dimen/adapter_text_padding"
-                android:text="@string/period"
-                android:textColor="@color/primaryTextColor" />
+                android:orientation="vertical">
+
+                <com.example.smarttraining.Views.TextViewRoboto
+                    android:id="@+id/badminton_nb_set"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/adapter_text_padding"
+                    android:paddingEnd="@dimen/adapter_text_padding"
+                    android:text="@string/nb_set_gagnant"
+                    android:textColor="@color/primaryTextColor" />
+
+                <com.example.smarttraining.Views.TextViewRoboto
+                    android:id="@+id/badminton_nb_point"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/adapter_text_padding"
+                    android:paddingEnd="@dimen/adapter_text_padding"
+                    android:text="@string/point_par_set_historique"
+                    android:textColor="@color/primaryTextColor" />
+
+                <com.example.smarttraining.Views.TextViewRoboto
+                    android:id="@+id/badminton_nb_point_max"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/adapter_text_padding"
+                    android:paddingEnd="@dimen/adapter_text_padding"
+                    android:text="@string/point_max_par_set"
+                    android:textColor="@color/primaryTextColor" />
+
+            </LinearLayout>
 
             <com.example.smarttraining.Views.TextViewRoboto
-                android:id="@+id/handball_score"
+                android:id="@+id/badminton_score"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="center"
                 android:layout_weight="8"
                 android:gravity="center"
                 android:text="@string/match_score"
                 android:textColor="@color/primaryTextColor" />
+
         </LinearLayout>
 
     </LinearLayout>
