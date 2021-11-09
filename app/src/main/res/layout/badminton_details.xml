@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/badminton_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.example.smarttraining.Views.TextViewRoboto
+        android:id="@+id/badminton_details_winner_declaration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/save_dialog_padding"
+        android:text="@string/badminton_winner_declaration_simple"
+        android:textColor="@color/primaryTextColor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <com.example.smarttraining.Views.TextViewRoboto
+            android:id="@+id/badminton_details_set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:padding="@dimen/save_dialog_padding"
+            android:text="@string/set_details"
+            android:textColor="@color/primaryTextColor" />
+
+        <com.example.smarttraining.Views.TextViewRoboto
+            android:id="@+id/badminton_details_set_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/save_dialog_padding"
+            android:text="@string/badminton_details_score"
+            android:textColor="@color/primaryTextColor" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -53,6 +53,8 @@ public class BadmintonMatch extends AppCompatActivity {
     private int nb_set_gagnant;
     private int nb_point;
     private int nb_point_max;
+    private String game_mode;
+    private String[][] teamsMembers;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,20 +66,20 @@ public class BadmintonMatch extends AppCompatActivity {
         chronometer = new Chronometer(this, timer, Chronometer.STATIC_DISPLAY);
 
         this.buttons_configurations();
-        this.PlayerDisplay();
         this.RetrieveParameters();
+        this.PlayerDisplay();
         this.SetScoreDisplay();
     }
 
     private void SetScoreDisplay() {
         this.set_score = new TextView[3];
 
-        for (int i=0; i<set_score.length;i++){
+        for (int i = 0; i < set_score.length; i++) {
             int resID = getResources().getIdentifier("badminton_match_score_set_" + (i + 1), "id", getPackageName());
             this.set_score[i] = findViewById(resID);
             this.set_score[i].setText(getResources().getString(R.string.undefined_score, "-", "-"));
 
-            if (nb_set_gagnant == 1){
+            if (nb_set_gagnant == 1) {
                 this.set_score[i].setLayoutParams(new LinearLayout.LayoutParams(0, 0, 0));
             }
         }
@@ -184,29 +186,82 @@ public class BadmintonMatch extends AppCompatActivity {
     }
 
     private void CheckWinConditions() {
+
         if ((set_team1 >= nb_set_gagnant) || (set_team2 >= nb_set_gagnant)) {
             if (timerRunning) {
                 chronometer.pause();
             }
             gameIsFinished = true;
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            final View view = this.getLayoutInflater().inflate(R.layout.save_dialog_box, null);
-            builder.setView(view);
-
-            final Button Save_Button = view.findViewById(R.id.save_dialog_Save);
-            final Button Exit_Button = view.findViewById(R.id.save_dialog_Exit);
-
-            final AlertDialog Picker_dialog = builder.create();
-            Picker_dialog.show();
-
-            Save_Button.setOnClickListener(v1 -> {
-                save_match();
-                Toast.makeText(this, "Saved !", Toast.LENGTH_SHORT).show();
-                finish();
-            });
-
-            Exit_Button.setOnClickListener(v1 -> finish());
+            SaveDialog();
         }
+    }
+
+    private void SaveDialog() {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        final View view = this.getLayoutInflater().inflate(R.layout.save_dialog_box, null);
+        builder.setView(view);
+
+        final Button Save_Button = view.findViewById(R.id.save_dialog_Save);
+        final Button Exit_Button = view.findViewById(R.id.save_dialog_Exit);
+
+        TextView winner_declaration = view.findViewById(R.id.badminton_details_winner_declaration);
+        TextView set_details = view.findViewById(R.id.badminton_details_set_value);
+
+        switch (game_mode){
+            case "SIMPLE":
+                if (set_team1 >= nb_set_gagnant) {
+                    winner_declaration.setText(getResources().getString(R.string.badminton_winner_declaration_simple, teamsMembers[0][0], set_team1, set_team2));
+                } else {
+                    winner_declaration.setText(getResources().getString(R.string.badminton_winner_declaration_simple, teamsMembers[1][0], set_team2, set_team1));
+                }
+                break;
+            case "DOUBLE":
+                if (set_team1 >= nb_set_gagnant) {
+                    if (team1Name.getText().toString().split("\\s+").length == 3){
+                        winner_declaration.setText(getResources().getString(R.string.badminton_winner_declaration_double, teamsMembers[0][0], teamsMembers[0][1], set_team1, set_team2));
+                    } else {
+                        winner_declaration.setText(getResources().getString(R.string.badminton_winner_declaration_simple, teamsMembers[0][0], set_team1, set_team1));
+                    }
+
+                } else {
+                    if (team2Name.getText().toString().split("\\s+").length == 3){
+                        winner_declaration.setText(getResources().getString(R.string.badminton_winner_declaration_double, teamsMembers[1][0], teamsMembers[1][1], set_team2, set_team1));
+                    } else {
+                        winner_declaration.setText(getResources().getString(R.string.badminton_winner_declaration_simple, teamsMembers[1][0], set_team2, set_team1));
+                    }
+                }
+                break;
+            default:
+        }
+
+        switch (current_set) {
+            case 1:
+                set_details.setText(getResources().getString(R.string.badminton_details_score,
+                        set_score[0].getText().toString(), "", ""));
+                break;
+            case 2:
+                set_details.setText(getResources().getString(R.string.badminton_details_score,
+                        set_score[0].getText().toString(), set_score[1].getText().toString(), ""));
+                break;
+            case 3:
+                set_details.setText(getResources().getString(R.string.badminton_details_score,
+                        set_score[0].getText().toString(), set_score[1].getText().toString(), set_score[2].getText().toString()));
+                break;
+            default:
+                set_details.setText("");
+        }
+
+        final AlertDialog Picker_dialog = builder.create();
+        Picker_dialog.show();
+
+        Save_Button.setOnClickListener(v1 -> {
+            save_match();
+            Toast.makeText(this, "Saved !", Toast.LENGTH_SHORT).show();
+            finish();
+        });
+
+        Exit_Button.setOnClickListener(v1 -> finish());
     }
 
     private void save_match() {
@@ -232,17 +287,63 @@ public class BadmintonMatch extends AppCompatActivity {
     }
 
     private void PlayerDisplay() {
-        Bundle bundle = getIntent().getExtras();
-        String[] teamMembers = bundle.getStringArray("teams_members");
-        team1Name.setText(teamMembers[0]);
-        team2Name.setText(teamMembers[1]);
+        switch (game_mode) {
+            case "SIMPLE":
+
+                if (teamsMembers[0][0].isEmpty()) {
+                    team1Name.setText(getResources().getString(R.string.player_1));
+                } else {
+                    team1Name.setText(teamsMembers[0][0]);
+                }
+
+                if (teamsMembers[1][0].isEmpty()) {
+                    team2Name.setText(getResources().getString(R.string.player_1));
+                } else {
+                    team2Name.setText(teamsMembers[1][0]);
+                }
+                break;
+
+            case "DOUBLE":
+
+                if (teamsMembers[0][0].isEmpty()) {
+                    if (teamsMembers[0][1].isEmpty()) {
+                        team1Name.setText(getResources().getString(R.string.team_1));
+                    } else {
+                        team1Name.setText(teamsMembers[0][1]);
+                    }
+                } else {
+                    if (teamsMembers[0][1].isEmpty()) {
+                        team1Name.setText(teamsMembers[0][0]);
+                    } else {
+                        team1Name.setText(getResources().getString(R.string.player_display, teamsMembers[0][0], teamsMembers[0][1]));
+                    }
+                }
+
+                if (teamsMembers[1][0].isEmpty()) {
+                    if (teamsMembers[1][1].isEmpty()) {
+                        team2Name.setText(getResources().getString(R.string.team_1));
+                    } else {
+                        team2Name.setText(teamsMembers[1][1]);
+                    }
+                } else {
+                    if (teamsMembers[1][1].isEmpty()) {
+                        team2Name.setText(teamsMembers[1][0]);
+                    } else {
+                        team2Name.setText(getResources().getString(R.string.player_display, teamsMembers[1][0], teamsMembers[1][1]));
+                    }
+                }
+        }
     }
 
     private void RetrieveParameters() {
         Bundle bundle = getIntent().getExtras();
-        nb_point = bundle.getInt("nb_point");
-        nb_set_gagnant = bundle.getInt("nb_set_gagnant");
-        nb_point_max = bundle.getInt("nb_point_max");
+        this.nb_point = bundle.getInt("nb_point");
+        this.nb_set_gagnant = bundle.getInt("nb_set_gagnant");
+        this.nb_point_max = bundle.getInt("nb_point_max");
+        this.game_mode = bundle.getString("game_mode");
+        this.teamsMembers = new String[2][2];
+        this.teamsMembers[0] = bundle.getStringArray("team1_members");
+        this.teamsMembers[1] = bundle.getStringArray("team2_members");
     }
 
 

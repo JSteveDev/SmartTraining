@@ -68,6 +68,24 @@
     <string name="player_1">Joueur 1</string>
     <string name="player_2">Joueur 2</string>
     <string name="play_button">Jouer</string>
+    <string name="simple_mode">SIMPLE</string>
+    <string name="double_mode">DOUBLE</string>
+
+    <!-- BADMINTON MATCH -->
+    <string name="zero">0</string>
+    <string name="chronometer_init">00:00</string>
+    <string name="player_display">%1$s - %2$s</string>
+
+
+    <!-- BADMINTON DETAILS -->
+    <string name="non">Non</string>
+    <string name="oui">Oui</string>
+    <string name="end_match">Fin du match !</string>
+    <string name="badminton_winner_declaration_simple">%1$s gagne %2$d set à %3$d !</string>
+    <string name="badminton_winner_declaration_double">%1$s et %2$s gagnent %3$d set à %4$d !</string>
+    <string name="set_details">Détail des set(s) :</string>
+    <string name="save_match_question">Voulez vous sauvegarder ce match ?</string>
+    <string name="badminton_details_score">%1$s\u0009\u0009\u0009\u0009%2$s\u0009\u0009\u0009\u0009%3$s</string>
 
 
     <!-- HISTORY ADAPTER -->
@@ -82,12 +100,8 @@
     <string name="nb_set_gagnant">Nombre de set gagnant : %1$d</string>
     <string name="point_par_set_historique">Point par set : %1$d</string>
     <string name="point_max_par_set">Point max par set : %1$d</string>
-    <string name="simple_mode">SIMPLE</string>
-    <string name="double_mode">DOUBLE</string>
-    <string name="zero">0</string>
-    <string name="chronometer_init">00:00</string>
-    <string name="non">Non</string>
-    <string name="oui">Oui</string>
-    <string name="end_match">Fin du match !</string>
+
+
+
 
 </resources>

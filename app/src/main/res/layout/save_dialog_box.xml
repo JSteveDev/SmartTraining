@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/secondaryColor"
     android:orientation="vertical"
@@ -17,11 +17,20 @@
         android:textColor="@color/primaryTextColor"
         android:textSize="@dimen/save_dialog_text_size" />
 
-    <com.example.smarttraining.Views.TextViewRoboto
+    <include
+        android:id="@+id/sports_details"
+        layout="@layout/badminton_details"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.example.smarttraining.Views.TextViewRoboto
+        android:id="@+id/badminton_details_save_question"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
         android:padding="@dimen/save_dialog_padding"
-        android:text="Les informations du match arrive bientôt !"
+        android:text="@string/save_match_question"
         android:textColor="@color/primaryTextColor" />
 
     <LinearLayout
@@ -41,7 +50,8 @@
             android:textColor="@color/primaryTextColor"
             android:textSize="@dimen/save_dialog_text_size"
             android:textStyle="bold"
-            app:backgroundTint="@color/black" />
+            app:backgroundTint="@color/black"
+            style="?android:attr/buttonBarButtonStyle" />
 
         <Button
             android:id="@+id/save_dialog_Save"
@@ -55,7 +65,8 @@
             android:textColor="@color/primaryTextColor"
             android:textSize="@dimen/save_dialog_text_size"
             android:textStyle="bold"
-            app:backgroundTint="@color/black" />
+            app:backgroundTint="@color/black"
+            style="?android:attr/buttonBarButtonStyle" />
 
     </LinearLayout>
 
