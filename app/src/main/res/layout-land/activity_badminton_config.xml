@@ -54,6 +54,7 @@
                             android:layout_height="wrap_content"
                             android:background="@drawable/custom_button_black_border"
                             android:text="@string/game_mode_item"
+                            android:textStyle="bold"
                             android:textColor="@color/primaryTextColor"
                             android:textSize="@dimen/config_textsize"
                             app:backgroundTint="@color/black" />
@@ -81,6 +82,7 @@
                             android:layout_height="wrap_content"
                             android:background="@drawable/custom_button_black_border"
                             android:text="@string/set_number_value"
+                            android:textStyle="bold"
                             android:textColor="@color/primaryTextColor"
                             android:textSize="@dimen/config_textsize"
                             app:backgroundTint="@color/black" />
@@ -108,6 +110,7 @@
                             android:layout_height="wrap_content"
                             android:background="@drawable/custom_button_black_border"
                             android:text="@string/set_point_value"
+                            android:textStyle="bold"
                             android:textColor="@color/primaryTextColor"
                             android:textSize="@dimen/config_textsize"
                             app:backgroundTint="@color/black" />
@@ -135,6 +138,7 @@
                             android:layout_height="wrap_content"
                             android:background="@drawable/custom_button_black_border"
                             android:text="@string/set_point_max_value"
+                            android:textStyle="bold"
                             android:textColor="@color/primaryTextColor"
                             android:textSize="@dimen/config_textsize"
                             app:backgroundTint="@color/black" />
@@ -222,9 +226,10 @@
             <Button
                 android:id="@+id/badminton_config_play"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="@dimen/config_padding"
+                android:textStyle="bold"
                 android:layout_weight="1"
                 android:background="@drawable/custom_button_black_border"
                 android:text="@string/play_button"

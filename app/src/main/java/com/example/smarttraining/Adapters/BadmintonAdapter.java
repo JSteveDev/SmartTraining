@@ -49,7 +49,6 @@ public class BadmintonAdapter extends RecyclerView.Adapter<BadmintonAdapter.Item
         holder.nb_set.setText(context.getResources().getString(R.string.nb_set_gagnant, data.getNb_set_gagnant()));
         holder.point.setText(context.getResources().getString(R.string.point_par_set_historique, data.getNb_point()));
         holder.point_max.setText(context.getResources().getString(R.string.point_max_par_set, data.getNb_point_max()));
-
         holder.score.setText(data.getScore());
 
         holder.deleteButton.setOnClickListener(view -> {

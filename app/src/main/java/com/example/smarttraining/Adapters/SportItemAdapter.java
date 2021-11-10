@@ -45,7 +45,30 @@ public class SportItemAdapter extends RecyclerView.Adapter<SportItemAdapter.Item
         int resImage = context.getResources().getIdentifier(String.valueOf(sportImageList[position]), "drawable", context.getPackageName());
         holder.sportImage.setImageResource(resImage);
 
-        holder.sportCardView.setOnClickListener(view -> context.startActivity(new Intent(context, BadmintonConfig.class)));
+        holder.sportCardView.setOnClickListener(view -> {
+            switch (position) {
+                case 0: // Badminton
+                    context.startActivity(new Intent(context, BadmintonConfig.class));
+                    break;
+                case 1: // Basket-ball
+                    break;
+                case 2: // Crossfit
+                    break;
+                case 3: // Escalade
+                    break;
+                case 4: // Futsal
+                    break;
+                case 5: // Handball
+                    break;
+                case 6: // Tennis
+                    break;
+                case 7: // Ultimate
+                    break;
+                case 8: // Volleyball
+                    break;
+                default:
+            }
+        });
     }
 
     @Override
