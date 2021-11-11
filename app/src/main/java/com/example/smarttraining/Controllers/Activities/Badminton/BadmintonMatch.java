@@ -1,7 +1,6 @@
-package com.example.smarttraining.Controllers.Activities;
+package com.example.smarttraining.Controllers.Activities.Badminton;
 
 import android.os.Bundle;
-import android.text.Layout;
 import android.view.View;
 import android.view.ViewStub;
 import android.view.WindowManager;
@@ -55,7 +54,7 @@ public class BadmintonMatch extends AppCompatActivity {
     private int nb_set_gagnant;
     private int nb_point;
     private int nb_point_max;
-    private String game_mode;
+    private int game_mode;
     private String[][] teamsMembers;
 
     @Override
@@ -214,34 +213,34 @@ public class BadmintonMatch extends AppCompatActivity {
         TextView winner_declaration = view.findViewById(R.id.badminton_details_winner_declaration);
         TextView set_details = view.findViewById(R.id.badminton_details_set_value);
 
-        switch (game_mode){
+        switch (game_mode) {
 
-            case "SIMPLE":
+            case 0: //SIMPLE MODE
                 String player1 = getResources().getString(R.string.player_1);
                 String player2 = getResources().getString(R.string.player_2);
                 if (set_team1 >= nb_set_gagnant) {
-                    if (teamsMembers[0][0].isEmpty()){
+                    if (teamsMembers[0][0].isEmpty()) {
                         winner_declaration.setText(getResources().getString(R.string.badminton_winner_declaration_simple, player1, set_team1, set_team2));
                     } else {
                         winner_declaration.setText(getResources().getString(R.string.badminton_winner_declaration_simple, teamsMembers[0][0], set_team1, set_team2));
                     }
                 } else {
-                    if (teamsMembers[1][0].isEmpty()){
+                    if (teamsMembers[1][0].isEmpty()) {
                         winner_declaration.setText(getResources().getString(R.string.badminton_winner_declaration_simple, player2, set_team2, set_team1));
                     }
                     winner_declaration.setText(getResources().getString(R.string.badminton_winner_declaration_simple, teamsMembers[1][0], set_team2, set_team1));
                 }
                 break;
 
-            case "DOUBLE":
+            case 1: //DOUBLE MODE
                 if (set_team1 >= nb_set_gagnant) {
-                    if (team1Name.getText().toString().split("\\s+").length == 3){
+                    if (team1Name.getText().toString().split("\\s+").length == 3) {
                         winner_declaration.setText(getResources().getString(R.string.badminton_winner_declaration_double, teamsMembers[0][0], teamsMembers[0][1], set_team1, set_team2));
                     } else {
                         String members;
 
                         if (teamsMembers[0][0].isEmpty()) {
-                            if (teamsMembers[0][1].isEmpty()){
+                            if (teamsMembers[0][1].isEmpty()) {
                                 members = getResources().getString(R.string.player_1);
                             } else {
                                 members = teamsMembers[0][1];
@@ -255,13 +254,13 @@ public class BadmintonMatch extends AppCompatActivity {
                     }
 
                 } else {
-                    if (team2Name.getText().toString().split("\\s+").length == 3){
+                    if (team2Name.getText().toString().split("\\s+").length == 3) {
                         winner_declaration.setText(getResources().getString(R.string.badminton_winner_declaration_double, teamsMembers[1][0], teamsMembers[1][1], set_team2, set_team1));
                     } else {
                         String members;
 
                         if (teamsMembers[1][0].isEmpty()) {
-                            if (teamsMembers[1][1].isEmpty()){
+                            if (teamsMembers[1][1].isEmpty()) {
                                 members = getResources().getString(R.string.player_2);
                             } else {
                                 members = teamsMembers[1][1];
@@ -330,7 +329,7 @@ public class BadmintonMatch extends AppCompatActivity {
 
     private void PlayerDisplay() {
         switch (game_mode) {
-            case "SIMPLE":
+            case 0: //SIMPLE MODE
 
                 if (teamsMembers[0][0].isEmpty()) {
                     team1Name.setText(getResources().getString(R.string.player_1));
@@ -345,11 +344,11 @@ public class BadmintonMatch extends AppCompatActivity {
                 }
                 break;
 
-            case "DOUBLE":
+            case 1: //DOUBLE MODE
 
                 if (teamsMembers[0][0].isEmpty()) {
                     if (teamsMembers[0][1].isEmpty()) {
-                        team1Name.setText(getResources().getString(R.string.team_1));
+                        team1Name.setText(getResources().getString(R.string.player_1));
                     } else {
                         team1Name.setText(teamsMembers[0][1]);
                     }
@@ -363,7 +362,7 @@ public class BadmintonMatch extends AppCompatActivity {
 
                 if (teamsMembers[1][0].isEmpty()) {
                     if (teamsMembers[1][1].isEmpty()) {
-                        team2Name.setText(getResources().getString(R.string.team_1));
+                        team2Name.setText(getResources().getString(R.string.player_1));
                     } else {
                         team2Name.setText(teamsMembers[1][1]);
                     }
@@ -382,7 +381,7 @@ public class BadmintonMatch extends AppCompatActivity {
         this.nb_point = bundle.getInt("nb_point");
         this.nb_set_gagnant = bundle.getInt("nb_set_gagnant");
         this.nb_point_max = bundle.getInt("nb_point_max");
-        this.game_mode = bundle.getString("game_mode");
+        this.game_mode = bundle.getInt("game_mode");
         this.teamsMembers = new String[2][2];
         this.teamsMembers[0] = bundle.getStringArray("team1_members");
         this.teamsMembers[1] = bundle.getStringArray("team2_members");

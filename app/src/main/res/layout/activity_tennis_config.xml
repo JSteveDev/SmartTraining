@@ -38,7 +38,7 @@
                     android:textSize="@dimen/config_textsize" />
 
                 <Button
-                    android:id="@+id/badminton_config_mode_jeu"
+                    android:id="@+id/tennis_config_mode_jeu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/custom_button_black_border"
@@ -65,7 +65,7 @@
                     android:textSize="@dimen/config_textsize" />
 
                 <Button
-                    android:id="@+id/badminton_config_set"
+                    android:id="@+id/tennis_config_set"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/custom_button_black_border"
@@ -76,60 +76,6 @@
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingTop="@dimen/config_padding"
-                android:paddingBottom="@dimen/config_padding">
-
-                <com.example.smarttraining.Views.TextViewRoboto
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="8"
-                    android:text="@string/set_point"
-                    android:textColor="@color/primaryTextColor"
-                    android:textSize="@dimen/config_textsize" />
-
-                <Button
-                    android:id="@+id/badminton_config_point"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/custom_button_black_border"
-                    android:textColor="@color/primaryTextColor"
-                    android:textSize="@dimen/config_textsize"
-                    android:textStyle="bold"
-                    app:backgroundTint="@color/black" />
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingTop="@dimen/config_padding"
-                android:paddingBottom="@dimen/config_padding">
-
-                <com.example.smarttraining.Views.TextViewRoboto
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="8"
-                    android:text="@string/set_point_max"
-                    android:textColor="@color/primaryTextColor"
-                    android:textSize="@dimen/config_textsize" />
-
-                <Button
-                    android:id="@+id/badminton_config_point_max"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/custom_button_black_border"
-                    android:textColor="@color/primaryTextColor"
-                    android:textSize="@dimen/config_textsize"
-                    android:textStyle="bold"
-                    app:backgroundTint="@color/black" />
-
-            </LinearLayout>
 
             <com.example.smarttraining.Views.TextViewRoboto
                 android:layout_width="match_parent"
@@ -140,7 +86,7 @@
                 android:textSize="@dimen/config_textsize" />
 
             <EditText
-                android:id="@+id/badminton_config_eq1_j1"
+                android:id="@+id/tennis_config_eq1_j1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/player_1"
@@ -149,7 +95,7 @@
                 android:textSize="@dimen/config_textsize" />
 
             <EditText
-                android:id="@+id/badminton_config_eq1_j2"
+                android:id="@+id/tennis_config_eq1_j2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/player_2"
@@ -166,7 +112,7 @@
                 android:textSize="@dimen/config_textsize" />
 
             <EditText
-                android:id="@+id/badminton_config_eq2_j1"
+                android:id="@+id/tennis_config_eq2_j1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/player_1"
@@ -175,7 +121,7 @@
                 android:textSize="@dimen/config_textsize" />
 
             <EditText
-                android:id="@+id/badminton_config_eq2_j2"
+                android:id="@+id/tennis_config_eq2_j2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/player_2"
@@ -184,7 +130,7 @@
                 android:textSize="@dimen/config_textsize" />
 
             <Button
-                android:id="@+id/badminton_config_play"
+                android:id="@+id/tennis_config_play"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"

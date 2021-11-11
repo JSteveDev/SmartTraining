@@ -9,14 +9,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartTraining">
+
+
+        <!-- Badminton -->
         <activity
-            android:name=".Controllers.Activities.BadmintonMatch"
+            android:name=".Controllers.Activities.Badminton.BadmintonMatch"
             android:exported="false" />
         <activity
-            android:name=".Controllers.Activities.BadmintonConfig"
+            android:name=".Controllers.Activities.Badminton.BadmintonConfig"
             android:exported="false"
             android:label="Configuration Badminton"
             android:parentActivityName=".Controllers.Activities.MainActivity" />
+
+        <!-- Tennis -->
+        <activity
+            android:name=".Controllers.Activities.Tennis.TennisConfig"
+            android:exported="false"
+            android:label="Configuration Tennis"
+            android:parentActivityName=".Controllers.Activities.MainActivity" />
+
         <activity
             android:name=".Controllers.Activities.HistoryActivity"
             android:label="@string/history_title" />

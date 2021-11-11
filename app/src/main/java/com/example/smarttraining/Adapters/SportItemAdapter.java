@@ -12,7 +12,8 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.smarttraining.Controllers.Activities.BadmintonConfig;
+import com.example.smarttraining.Controllers.Activities.Badminton.BadmintonConfig;
+import com.example.smarttraining.Controllers.Activities.Tennis.TennisConfig;
 import com.example.smarttraining.R;
 
 import butterknife.BindView;
@@ -61,6 +62,7 @@ public class SportItemAdapter extends RecyclerView.Adapter<SportItemAdapter.Item
                 case 5: // Handball
                     break;
                 case 6: // Tennis
+                    context.startActivity(new Intent(context, TennisConfig.class));
                     break;
                 case 7: // Ultimate
                     break;
