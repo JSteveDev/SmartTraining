@@ -13,6 +13,8 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.smarttraining.Controllers.Activities.Badminton.BadmintonConfig;
+import com.example.smarttraining.Controllers.Activities.BasketBall.BasketBallConfig;
+import com.example.smarttraining.Controllers.Activities.Futsal.FutsalConfig;
 import com.example.smarttraining.Controllers.Activities.Tennis.TennisConfig;
 import com.example.smarttraining.R;
 
@@ -52,12 +54,14 @@ public class SportItemAdapter extends RecyclerView.Adapter<SportItemAdapter.Item
                     context.startActivity(new Intent(context, BadmintonConfig.class));
                     break;
                 case 1: // Basket-ball
+                    context.startActivity(new Intent(context, BasketBallConfig.class));
                     break;
                 case 2: // Crossfit
                     break;
                 case 3: // Escalade
                     break;
                 case 4: // Futsal
+                    context.startActivity(new Intent(context, FutsalConfig.class));
                     break;
                 case 5: // Handball
                     break;

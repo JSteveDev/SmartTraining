@@ -10,6 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartTraining">
 
+        <!-- Basketball -->
+        <activity
+            android:name=".Controllers.Activities.BasketBall.BasketBallConfig"
+            android:exported="false"
+            android:label="Configuration Basket-ball"
+            android:parentActivityName=".Controllers.Activities.MainActivity" />
+
+        <!-- Futsal -->
+        <activity
+            android:name=".Controllers.Activities.Futsal.FutsalConfig"
+            android:exported="false"
+            android:label="Configuration Futsal"
+            android:parentActivityName=".Controllers.Activities.MainActivity" />
 
         <!-- Badminton -->
         <activity
@@ -27,6 +40,8 @@
             android:exported="false"
             android:label="Configuration Tennis"
             android:parentActivityName=".Controllers.Activities.MainActivity" />
+
+
 
         <activity
             android:name=".Controllers.Activities.HistoryActivity"

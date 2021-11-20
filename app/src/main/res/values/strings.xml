@@ -77,6 +77,7 @@
     <string name="non">Non</string>
     <string name="oui">Oui</string>
     <string name="end_match">Fin du match !</string>
+    <string name="period_value">%1$d min</string>
     <string name="badminton_winner_declaration_simple">%1$s gagne %2$d set à %3$d !</string>
     <string name="badminton_winner_declaration_double">%1$s et %2$s gagnent %3$d set à %4$d !</string>
     <string name="set_details">Détail des set(s) :</string>

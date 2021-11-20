@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/secondaryColor"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:padding="@dimen/config_padding_scrollview">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/config_padding"
+                android:paddingBottom="@dimen/config_padding">
+
+                <com.example.smarttraining.Views.TextViewRoboto
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:text="Durée d'une période"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/config_textsize" />
+
+                <Button
+                    android:id="@+id/futsal_config_period"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_button_black_border"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/config_textsize"
+                    android:textStyle="bold"
+                    app:backgroundTint="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/config_padding"
+                android:paddingBottom="@dimen/config_padding">
+
+                <com.example.smarttraining.Views.TextViewRoboto
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:text="Afficher les joueurs"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/config_textsize" />
+
+                <Button
+                    android:id="@+id/futsal_config_display_players"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_button_black_border"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/config_textsize"
+                    android:textStyle="bold"
+                    app:backgroundTint="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/config_padding"
+                android:paddingBottom="@dimen/config_padding">
+
+                <com.example.smarttraining.Views.TextViewRoboto
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:text="Nombre de joueur par équipe"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/config_textsize" />
+
+                <Button
+                    android:id="@+id/futsal_config_nb_player"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_button_black_border"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/config_textsize"
+                    android:textStyle="bold"
+                    app:backgroundTint="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.example.smarttraining.Views.TextViewRoboto
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/config_padding"
+                    android:text="@string/team_1"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/config_textsize" />
+
+                <EditText
+                    android:id="@+id/futsal_config_eq1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Nom de l'équipe 1"
+                    android:textColor="@color/primaryTextColor"
+                    android:textColorHint="@color/primaryTextColor"
+                    android:textSize="@dimen/config_textsize" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/futsal_config_eq1_j1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryTextColor"
+                android:textColorHint="@color/primaryTextColor"
+                android:textSize="@dimen/config_textsize" />
+
+            <EditText
+                android:id="@+id/futsal_config_eq1_j2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryTextColor"
+                android:textColorHint="@color/primaryTextColor"
+                android:textSize="@dimen/config_textsize" />
+
+            <EditText
+                android:id="@+id/futsal_config_eq1_j3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryTextColor"
+                android:textColorHint="@color/primaryTextColor"
+                android:textSize="@dimen/config_textsize" />
+
+            <EditText
+                android:id="@+id/futsal_config_eq1_j4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryTextColor"
+                android:textColorHint="@color/primaryTextColor"
+                android:textSize="@dimen/config_textsize" />
+
+            <EditText
+                android:id="@+id/futsal_config_eq1_j5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryTextColor"
+                android:textColorHint="@color/primaryTextColor"
+                android:textSize="@dimen/config_textsize" />
+
+            <EditText
+                android:id="@+id/futsal_config_eq1_j6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryTextColor"
+                android:textColorHint="@color/primaryTextColor"
+                android:textSize="@dimen/config_textsize" />
+
+            <EditText
+                android:id="@+id/futsal_config_eq1_j7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryTextColor"
+                android:textColorHint="@color/primaryTextColor"
+                android:textSize="@dimen/config_textsize" />
+
+            <EditText
+                android:id="@+id/futsal_config_eq1_j8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryTextColor"
+                android:textColorHint="@color/primaryTextColor"
+                android:textSize="@dimen/config_textsize" />
+
+            <EditText
+                android:id="@+id/futsal_config_eq1_j9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryTextColor"
+                android:textColorHint="@color/primaryTextColor"
+                android:textSize="@dimen/config_textsize" />
+
+            <EditText
+                android:id="@+id/futsal_config_eq1_j10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryTextColor"
+                android:textColorHint="@color/primaryTextColor"
+                android:textSize="@dimen/config_textsize" />
+
+            <EditText
+                android:id="@+id/futsal_config_eq1_j11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryTextColor"
+                android:textColorHint="@color/primaryTextColor"
+                android:textSize="@dimen/config_textsize" />
+
+            <EditText
+                android:id="@+id/futsal_config_eq1_j12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryTextColor"
+                android:textColorHint="@color/primaryTextColor"
+                android:textSize="@dimen/config_textsize" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.example.smarttraining.Views.TextViewRoboto
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/config_padding"
+                    android:text="@string/team_2"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/config_textsize" />
+
+                <EditText
+                    android:id="@+id/futsal_config_eq2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Nom de l'équipe 2"
+                    android:textColor="@color/primaryTextColor"
+                    android:textColorHint="@color/primaryTextColor"
+                    android:textSize="@dimen/config_textsize" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/futsal_config_eq2_j1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryTextColor"
+                android:textColorHint="@color/primaryTextColor"
+                android:textSize="@dimen/config_textsize" />
+
+            <EditText
+                android:id="@+id/futsal_config_eq2_j2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryTextColor"
+                android:textColorHint="@color/primaryTextColor"
+                android:textSize="@dimen/config_textsize" />
+
+            <EditText
+                android:id="@+id/futsal_config_eq2_j3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryTextColor"
+                android:textColorHint="@color/primaryTextColor"
+                android:textSize="@dimen/config_textsize" />
+
+            <EditText
+                android:id="@+id/futsal_config_eq2_j4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryTextColor"
+                android:textColorHint="@color/primaryTextColor"
+                android:textSize="@dimen/config_textsize" />
+
+            <EditText
+                android:id="@+id/futsal_config_eq2_j5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryTextColor"
+                android:textColorHint="@color/primaryTextColor"
+                android:textSize="@dimen/config_textsize" />
+
+            <EditText
+                android:id="@+id/futsal_config_eq2_j6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryTextColor"
+                android:textColorHint="@color/primaryTextColor"
+                android:textSize="@dimen/config_textsize" />
+
+            <EditText
+                android:id="@+id/futsal_config_eq2_j7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryTextColor"
+                android:textColorHint="@color/primaryTextColor"
+                android:textSize="@dimen/config_textsize" />
+
+            <EditText
+                android:id="@+id/futsal_config_eq2_j8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryTextColor"
+                android:textColorHint="@color/primaryTextColor"
+                android:textSize="@dimen/config_textsize" />
+
+            <EditText
+                android:id="@+id/futsal_config_eq2_j9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryTextColor"
+                android:textColorHint="@color/primaryTextColor"
+                android:textSize="@dimen/config_textsize" />
+
+            <EditText
+                android:id="@+id/futsal_config_eq2_j10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryTextColor"
+                android:textColorHint="@color/primaryTextColor"
+                android:textSize="@dimen/config_textsize" />
+
+            <EditText
+                android:id="@+id/futsal_config_eq2_j11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryTextColor"
+                android:textColorHint="@color/primaryTextColor"
+                android:textSize="@dimen/config_textsize" />
+
+            <EditText
+                android:id="@+id/futsal_config_eq2_j12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryTextColor"
+                android:textColorHint="@color/primaryTextColor"
+                android:textSize="@dimen/config_textsize" />
+
+
+            <Button
+                android:id="@+id/futsal_config_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/config_padding"
+                android:background="@drawable/custom_button_black_border"
+                android:text="@string/play_button"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/config_textsize"
+                android:textStyle="bold"
+                app:backgroundTint="@color/black" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>
