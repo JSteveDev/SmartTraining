@@ -84,6 +84,8 @@
     <string name="save_match_question">Voulez vous sauvegarder ce match ?</string>
     <string name="badminton_details_score">%1$s\u0009\u0009\u0009\u0009%2$s\u0009\u0009\u0009\u0009%3$s</string>
 
+    <!-- BASKET CONFIG -->
+
 
     <!-- HISTORY ADAPTER -->
     <string name="adapter_date">Date</string>
@@ -97,6 +99,12 @@
     <string name="nb_set_gagnant">Nombre de set gagnant : %1$d</string>
     <string name="point_par_set_historique">Point par set : %1$d</string>
     <string name="point_max_par_set">Point max par set : %1$d</string>
+
+    <string name="display_players">Afficher les joueurs</string>
+    <string name="period_duration">Durée d\'une période</string>
+    <string name="nb_players_team">Nombre de joueur par équipe</string>
+    <string name="team1_name">Nom de l\'équipe 1</string>
+    <string name="team2_name">Nom de l\'équipe 2</string>
 
 
 </resources>

@@ -33,7 +33,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="8"
-                    android:text="Durée d'une période"
+                    android:text="@string/period_duration"
                     android:textColor="@color/primaryTextColor"
                     android:textSize="@dimen/config_textsize" />
 
@@ -60,7 +60,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="8"
-                    android:text="Afficher les joueurs"
+                    android:text="@string/display_players"
                     android:textColor="@color/primaryTextColor"
                     android:textSize="@dimen/config_textsize" />
 
@@ -87,7 +87,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="8"
-                    android:text="Nombre de joueur par équipe"
+                    android:text="@string/nb_players_team"
                     android:textColor="@color/primaryTextColor"
                     android:textSize="@dimen/config_textsize" />
 
@@ -121,7 +121,7 @@
                     android:id="@+id/futsal_config_eq1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="Nom de l'équipe 1"
+                    android:hint="@string/team1_name"
                     android:textColor="@color/primaryTextColor"
                     android:textColorHint="@color/primaryTextColor"
                     android:textSize="@dimen/config_textsize" />
@@ -242,7 +242,7 @@
                     android:id="@+id/futsal_config_eq2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="Nom de l'équipe 2"
+                    android:hint="@string/team2_name"
                     android:textColor="@color/primaryTextColor"
                     android:textColorHint="@color/primaryTextColor"
                     android:textSize="@dimen/config_textsize" />
