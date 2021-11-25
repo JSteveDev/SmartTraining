@@ -5,13 +5,18 @@
       <map>
         <entry key="..\:/AndroidProject/SmartTraining/app/src/main/res/drawable/baseline_delete_24.xml" value="0.3828125" />
         <entry key="..\:/AndroidProject/SmartTraining/app/src/main/res/drawable/bottom_navigation_colors.xml" value="0.3828125" />
+        <entry key="..\:/AndroidProject/SmartTraining/app/src/main/res/drawable/button_blue_high_radius.xml" value="0.3828125" />
+        <entry key="..\:/AndroidProject/SmartTraining/app/src/main/res/drawable/button_blue_low_radius.xml" value="0.3828125" />
+        <entry key="..\:/AndroidProject/SmartTraining/app/src/main/res/drawable/custom_button_black_border.xml" value="0.3828125" />
         <entry key="..\:/AndroidProject/SmartTraining/app/src/main/res/drawable/custom_button_white_border.xml" value="0.3828125" />
         <entry key="..\:/AndroidProject/SmartTraining/app/src/main/res/drawable/custom_edittext.xml" value="0.3828125" />
+        <entry key="..\:/AndroidProject/SmartTraining/app/src/main/res/drawable/edittext_border.xml" value="0.3828125" />
         <entry key="..\:/AndroidProject/SmartTraining/app/src/main/res/layout-land/activity_badminton_config.xml" value="0.31040564373897706" />
         <entry key="..\:/AndroidProject/SmartTraining/app/src/main/res/layout-land/activity_badminton_match.xml" value="0.22" />
         <entry key="..\:/AndroidProject/SmartTraining/app/src/main/res/layout-land/activity_basket_ball_config.xml" value="0.31040564373897706" />
         <entry key="..\:/AndroidProject/SmartTraining/app/src/main/res/layout-land/activity_futsal_config.xml" value="0.31040564373897706" />
         <entry key="..\:/AndroidProject/SmartTraining/app/src/main/res/layout-land/activity_history.xml" value="0.31040564373897706" />
+        <entry key="..\:/AndroidProject/SmartTraining/app/src/main/res/layout-land/activity_tennis_config.xml" value="0.31040564373897706" />
         <entry key="..\:/AndroidProject/SmartTraining/app/src/main/res/layout-land/adapter_badminton.xml" value="0.31040564373897706" />
         <entry key="..\:/AndroidProject/SmartTraining/app/src/main/res/layout-land/fragment_history.xml" value="0.31040564373897706" />
         <entry key="..\:/AndroidProject/SmartTraining/app/src/main/res/layout-land/fragment_sports.xml" value="0.31040564373897706" />

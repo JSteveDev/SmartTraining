@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/secondaryColor"
+    android:background="@color/primaryColor"
     android:orientation="vertical">
 
     <include
@@ -22,125 +22,195 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
+
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingTop="@dimen/config_padding"
-                android:paddingBottom="@dimen/config_padding">
+                android:layout_marginBottom="20dip"
+                app:cardBackgroundColor="#FEFEFE"
+                app:cardCornerRadius="@dimen/size_cardview_radius"
+                app:cardElevation="@dimen/size_cardview_elevation">
 
-                <com.example.smarttraining.Views.TextViewRoboto
-                    android:layout_width="0dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="8"
-                    android:text="@string/game_mode"
-                    android:textColor="@color/primaryTextColor"
-                    android:textSize="@dimen/config_textsize" />
+                    android:orientation="horizontal"
+                    android:padding="@dimen/config_padding">
 
-                <Button
-                    android:id="@+id/tennis_config_mode_jeu"
-                    android:layout_width="wrap_content"
+                    <com.example.smarttraining.Views.TextViewRoboto
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:text="@string/game_mode"
+                        android:textColor="@color/primaryTextColor"
+                        android:textSize="@dimen/config_textsize" />
+
+                    <Button
+                        android:id="@+id/tennis_config_mode_jeu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_blue_low_radius"
+                        android:text="@string/zero"
+                        android:textColor="@color/secondaryTextColor"
+                        android:textSize="@dimen/config_textsize"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dip"
+                app:cardBackgroundColor="#FEFEFE"
+                app:cardCornerRadius="@dimen/size_cardview_radius"
+                app:cardElevation="@dimen/size_cardview_elevation">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/custom_button_black_border"
-                    android:textColor="@color/primaryTextColor"
-                    android:textSize="@dimen/config_textsize"
-                    android:textStyle="bold"
-                    app:backgroundTint="@color/black" />
+                    android:orientation="horizontal"
+                    android:padding="@dimen/config_padding">
 
-            </LinearLayout>
+                    <com.example.smarttraining.Views.TextViewRoboto
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:text="@string/set_number"
+                        android:textColor="@color/primaryTextColor"
+                        android:textSize="@dimen/config_textsize" />
 
-            <LinearLayout
+                    <Button
+                        android:id="@+id/tennis_config_set"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_blue_low_radius"
+                        android:text="@string/zero"
+                        android:textColor="@color/secondaryTextColor"
+                        android:textSize="@dimen/config_textsize"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/team1_cardview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingTop="@dimen/config_padding"
-                android:paddingBottom="@dimen/config_padding">
+                android:layout_marginBottom="20dip"
+                app:cardBackgroundColor="#FEFEFE"
+                app:cardCornerRadius="@dimen/size_cardview_radius"
+                app:cardElevation="@dimen/size_cardview_elevation">
 
-                <com.example.smarttraining.Views.TextViewRoboto
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="8"
-                    android:text="@string/set_number"
-                    android:textColor="@color/primaryTextColor"
-                    android:textSize="@dimen/config_textsize" />
-
-                <Button
-                    android:id="@+id/tennis_config_set"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/custom_button_black_border"
-                    android:textColor="@color/primaryTextColor"
-                    android:textSize="@dimen/config_textsize"
-                    android:textStyle="bold"
-                    app:backgroundTint="@color/black" />
-
-            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
 
-            <com.example.smarttraining.Views.TextViewRoboto
+                    <com.example.smarttraining.Views.TextViewRoboto
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/config_padding"
+                        android:text="@string/team_1"
+                        android:textColor="@color/primaryTextColor"
+                        android:textSize="@dimen/config_textsize" />
+
+                    <EditText
+                        android:id="@+id/tennis_config_eq1_j1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/config_padding"
+                        android:background="@drawable/edittext_border"
+                        android:hint="@string/player_1"
+                        android:minHeight="48dp"
+                        android:textColor="@color/primaryTextColor"
+                        android:textColorHint="@color/primaryTextColor"
+                        android:textSize="@dimen/config_textsize" />
+
+                    <EditText
+                        android:id="@+id/tennis_config_eq1_j2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/config_padding"
+                        android:background="@drawable/edittext_border"
+                        android:hint="@string/player_2"
+                        android:minHeight="48dp"
+                        android:textColor="@color/primaryTextColor"
+                        android:textColorHint="@color/primaryTextColor"
+                        android:textSize="@dimen/config_textsize" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/team2_cardview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/config_padding"
-                android:text="@string/team_1"
-                android:textColor="@color/primaryTextColor"
-                android:textSize="@dimen/config_textsize" />
+                android:layout_marginBottom="20dip"
+                app:cardBackgroundColor="#FEFEFE"
+                app:cardCornerRadius="@dimen/size_cardview_radius"
+                app:cardElevation="@dimen/size_cardview_elevation">
 
-            <EditText
-                android:id="@+id/tennis_config_eq1_j1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/player_1"
-                android:textColor="@color/primaryTextColor"
-                android:textColorHint="@color/primaryTextColor"
-                android:textSize="@dimen/config_textsize" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/tennis_config_eq1_j2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/player_2"
-                android:textColor="@color/primaryTextColor"
-                android:textColorHint="@color/primaryTextColor"
-                android:textSize="@dimen/config_textsize" />
+                    <com.example.smarttraining.Views.TextViewRoboto
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/config_padding"
+                        android:text="@string/team_2"
+                        android:textColor="@color/primaryTextColor"
+                        android:textSize="@dimen/config_textsize" />
 
-            <com.example.smarttraining.Views.TextViewRoboto
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/config_padding"
-                android:text="@string/team_2"
-                android:textColor="@color/primaryTextColor"
-                android:textSize="@dimen/config_textsize" />
+                    <EditText
+                        android:id="@+id/tennis_config_eq2_j1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/config_padding"
+                        android:background="@drawable/edittext_border"
+                        android:hint="@string/player_1"
+                        android:minHeight="48dp"
+                        android:textColor="@color/primaryTextColor"
+                        android:textColorHint="@color/primaryTextColor"
+                        android:textSize="@dimen/config_textsize" />
 
-            <EditText
-                android:id="@+id/tennis_config_eq2_j1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/player_1"
-                android:textColor="@color/primaryTextColor"
-                android:textColorHint="@color/primaryTextColor"
-                android:textSize="@dimen/config_textsize" />
+                    <EditText
+                        android:id="@+id/tennis_config_eq2_j2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/config_padding"
+                        android:background="@drawable/edittext_border"
+                        android:hint="@string/player_2"
+                        android:minHeight="48dp"
+                        android:textColor="@color/primaryTextColor"
+                        android:textColorHint="@color/primaryTextColor"
+                        android:textSize="@dimen/config_textsize" />
 
-            <EditText
-                android:id="@+id/tennis_config_eq2_j2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/player_2"
-                android:textColor="@color/primaryTextColor"
-                android:textColorHint="@color/primaryTextColor"
-                android:textSize="@dimen/config_textsize" />
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
 
             <Button
                 android:id="@+id/tennis_config_play"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="@dimen/config_padding"
-                android:background="@drawable/custom_button_black_border"
+                android:background="@drawable/button_blue_high_radius"
                 android:text="@string/play_button"
-                android:textColor="@color/primaryTextColor"
+                android:textColor="@color/secondaryTextColor"
                 android:textSize="@dimen/config_textsize"
-                android:textStyle="bold"
-                app:backgroundTint="@color/black" />
+                android:textStyle="bold" />
 
         </LinearLayout>
 

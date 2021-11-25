@@ -8,11 +8,11 @@
 
     <!-- Sports CardViews -->
     <dimen name="size_cardview_margin">5dip</dimen>
-    <dimen name="size_cardview_radius">5dip</dimen>
-    <dimen name="size_cardview_elevation">5dip</dimen>
+    <dimen name="size_cardview_radius">10dip</dimen>
+    <dimen name="size_cardview_elevation">2dip</dimen>
 
     <!-- Sports Config -->
-    <dimen name="config_padding_scrollview">10dip</dimen>
+    <dimen name="config_padding_scrollview">15dip</dimen>
     <dimen name="config_padding">8dip</dimen>
     <dimen name="config_textsize">18sp</dimen>
 
