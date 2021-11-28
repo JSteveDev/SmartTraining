@@ -156,20 +156,23 @@ public class FutsalConfig extends AppCompatActivity {
     }
 
     private void DisplayPlayer(){
+
         if (display_player_value){
-            for (int i=0; i<nb_player_value; i++){
-                joueurs_equipe1[i].setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-                joueurs_equipe2[i].setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-            }
-            for (int i=nb_player_value; i<NUMBER_PLAYER; i++){
-                joueurs_equipe1[i].setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 0));
-                joueurs_equipe2[i].setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 0));
+            for (int i=0; i<NUMBER_PLAYER; i++) {
+                if (i < nb_player_value) {
+                    joueurs_equipe1[i].setVisibility(View.VISIBLE);
+                    joueurs_equipe2[i].setVisibility(View.VISIBLE);
+                } else {
+                    joueurs_equipe1[i].setVisibility(View.GONE);
+                    joueurs_equipe2[i].setVisibility(View.GONE);
+                }
             }
 
         } else {
+
             for (int i=0; i<NUMBER_PLAYER; i++){
-                joueurs_equipe1[i].setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 0));
-                joueurs_equipe2[i].setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 0));
+                joueurs_equipe1[i].setVisibility(View.GONE);
+                joueurs_equipe2[i].setVisibility(View.GONE);
             }
         }
     }

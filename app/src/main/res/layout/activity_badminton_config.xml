@@ -189,7 +189,8 @@
                         android:minHeight="48dp"
                         android:textColor="@color/primaryTextColor"
                         android:textColorHint="@color/primaryTextColor"
-                        android:textSize="@dimen/config_textsize" />
+                        android:textSize="@dimen/config_textsize"
+                        android:visibility="visible" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
