@@ -3,10 +3,12 @@ package com.example.smarttraining.Controllers.Activities.Badminton;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.NumberPicker;
 import android.widget.Toast;
 
@@ -96,16 +98,19 @@ public class BadmintonConfig extends AppCompatActivity {
         joueurs_equipe2[0] = findViewById(R.id.badminton_config_eq2_j1);
         joueurs_equipe2[1] = findViewById(R.id.badminton_config_eq2_j2);
 
+        ViewGroup.LayoutParams layout = joueurs_equipe1[1].getLayoutParams();
+
         switch (game_mode_value){
             case 0: //SIMPLE MODE
-                joueurs_equipe1[1].getLayoutParams().height = 0;
-                joueurs_equipe2[1].getLayoutParams().height = 0;
+                layout.height = 0;
                 break;
             case 1: //DOUBLE MODE
-                joueurs_equipe1[1].getLayoutParams().height = WindowManager.LayoutParams.WRAP_CONTENT;
-                joueurs_equipe2[1].getLayoutParams().height = WindowManager.LayoutParams.WRAP_CONTENT;
+                layout.height = LinearLayout.LayoutParams.WRAP_CONTENT;
                 break;
         }
+
+        joueurs_equipe1[1].setLayoutParams(layout);
+        joueurs_equipe2[1].setLayoutParams(layout);
     }
 
     @Override
@@ -192,22 +197,26 @@ public class BadmintonConfig extends AppCompatActivity {
 
     private void SetModejeu() {
 
+        ViewGroup.LayoutParams layout = joueurs_equipe1[1].getLayoutParams();
+
         switch (game_mode_value) {
             case 0: //SIMPLE MODE
                 game_mode_value = 1;
                 game_mode.setText(getResources().getString(R.string.double_mode));
-                joueurs_equipe1[1].getLayoutParams().height = WindowManager.LayoutParams.WRAP_CONTENT;
-                joueurs_equipe2[1].getLayoutParams().height = WindowManager.LayoutParams.WRAP_CONTENT;
+                layout.height = LinearLayout.LayoutParams.WRAP_CONTENT;
+
                 break;
             case 1: //DOUBLE MODE
                 game_mode_value = 0;
                 game_mode.setText(getResources().getString(R.string.simple_mode));
-                joueurs_equipe1[1].getLayoutParams().height = 0;
-                joueurs_equipe2[1].getLayoutParams().height = 0;
+                layout.height = 0;
                 break;
             default:
                 Toast.makeText(this, "default", Toast.LENGTH_SHORT).show();
         }
+
+        joueurs_equipe1[1].setLayoutParams(layout);
+        joueurs_equipe2[1].setLayoutParams(layout);
 
     }
 

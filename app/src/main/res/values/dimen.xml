@@ -15,6 +15,7 @@
     <dimen name="config_padding_scrollview">15dip</dimen>
     <dimen name="config_padding">8dip</dimen>
     <dimen name="config_textsize">18sp</dimen>
+    <dimen name="config_padding_play">15dip</dimen>
 
     <!-- History Adapters -->
     <dimen name="adapter_cardview_margin">5dip</dimen>
