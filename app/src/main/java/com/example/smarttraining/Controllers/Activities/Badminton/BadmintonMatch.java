@@ -9,6 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -19,6 +20,8 @@ import com.example.smarttraining.Views.Chronometer;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import icepick.Icepick;
+import icepick.State;
 
 public class BadmintonMatch extends AppCompatActivity {
 
@@ -38,18 +41,20 @@ public class BadmintonMatch extends AppCompatActivity {
     @BindView(R.id.badminton_match_name_team_2)
     TextView team2Name;
 
-    private TextView[] set_score;
+    @State TextView[] set_score;
 
     private Chronometer chronometer;
-    private boolean timerRunning;
-    private boolean gameIsFinished = false;
 
-    private int current_team_1_score;
-    private int current_team_2_score;
-    private int current_set;
+    @State boolean timerRunning;
+    @State boolean gameIsFinished = false;
+    @State long time;
+    @State int current_team_1_score;
+    @State int current_team_2_score;
+    @State int current_set;
 
-    private int set_team1;
-    private int set_team2;
+    @State int set_team1;
+    @State int set_team2;
+    @State int[][] scores = new int[3][2];
 
     private int nb_set_gagnant;
     private int nb_point;
@@ -62,14 +67,20 @@ public class BadmintonMatch extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_badminton_match);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        Icepick.restoreInstanceState(this, savedInstanceState);
         ButterKnife.bind(this);
-
-        chronometer = new Chronometer(this, timer, Chronometer.STATIC_DISPLAY);
 
         this.buttons_configurations();
         this.RetrieveParameters();
         this.PlayerDisplay();
         this.SetScoreDisplay();
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        time = chronometer.getTime();
+        Icepick.saveInstanceState(this, outState);
     }
 
     private void SetScoreDisplay() {
@@ -78,11 +89,26 @@ public class BadmintonMatch extends AppCompatActivity {
         for (int i = 0; i < set_score.length; i++) {
             int resID = getResources().getIdentifier("badminton_match_score_set_" + (i + 1), "id", getPackageName());
             this.set_score[i] = findViewById(resID);
-            this.set_score[i].setText(getResources().getString(R.string.undefined_score, "-", "-"));
-
+            if ((scores[i][0] == 0) && (scores[i][1] == 0)){
+                this.set_score[i].setText(getResources().getString(R.string.undefined_score, "-", "-"));
+            } else {
+                this.set_score[i].setText(getResources().getString(R.string.undefined_score, String.valueOf(scores[i][0]), String.valueOf(scores[i][1])));
+            }
             if (nb_set_gagnant == 1) {
                 this.set_score[i].setLayoutParams(new LinearLayout.LayoutParams(0, 0, 0));
             }
+        }
+
+        this.team1Score.setText(String.valueOf(current_team_1_score));
+        this.team2Score.setText(String.valueOf(current_team_2_score));
+
+        this.team1Set.setText(String.valueOf(set_team1));
+        this.team2Set.setText(String.valueOf(set_team2));
+
+        chronometer = new Chronometer(this, timer, Chronometer.STATIC_DISPLAY, time);
+
+        if (timerRunning){
+            chronometer.start();
         }
     }
 
@@ -324,7 +350,9 @@ public class BadmintonMatch extends AppCompatActivity {
     }
 
     private void SetDisplayRefresh() {
-        this.set_score[current_set].setText(getResources().getString(R.string.undefined_score, String.valueOf(current_team_1_score), String.valueOf(current_team_2_score)));
+        scores[current_set][0] = current_team_1_score;
+        scores[current_set][1] = current_team_2_score;
+        this.set_score[current_set].setText(getResources().getString(R.string.undefined_score, String.valueOf(scores[current_set][0]), String.valueOf(scores[current_set][1])));
     }
 
     private void PlayerDisplay() {
@@ -386,6 +414,5 @@ public class BadmintonMatch extends AppCompatActivity {
         this.teamsMembers[0] = bundle.getStringArray("team1_members");
         this.teamsMembers[1] = bundle.getStringArray("team2_members");
     }
-
 
 }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/secondaryColor"
+    android:background="@color/primaryColor"
     android:orientation="vertical">
 
     <include
@@ -14,6 +14,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_above="@+id/basket_config_play"
+        android:layout_below="@+id/toolbar"
         android:fillViewport="true"
         android:padding="@dimen/config_padding_scrollview">
 
@@ -29,69 +31,84 @@
                 android:paddingTop="@dimen/config_padding"
                 android:paddingBottom="@dimen/config_padding">
 
-                <LinearLayout
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/config_padding"
+                    android:layout_marginBottom="@dimen/config_padding"
                     android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="@dimen/config_padding">
-
-                        <com.example.smarttraining.Views.TextViewRoboto
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="8"
-                            android:text="@string/display_players"
-                            android:textColor="@color/primaryTextColor"
-                            android:textSize="@dimen/config_textsize" />
-
-                        <Button
-                            android:id="@+id/basket_config_display_players"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/button_blue_high_radius"
-                            android:textColor="@color/primaryTextColor"
-                            android:textSize="@dimen/config_textsize"
-                            android:textStyle="bold"
-                            app:backgroundTint="@color/black" />
-
-                    </LinearLayout>
+                    app:cardBackgroundColor="#FEFEFE"
+                    app:cardCornerRadius="@dimen/size_cardview_radius"
+                    app:cardElevation="@dimen/size_cardview_elevation">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:padding="@dimen/config_padding">
+                        android:layout_weight="1"
+                        android:orientation="vertical">
 
-                        <com.example.smarttraining.Views.TextViewRoboto
-                            android:layout_width="0dp"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="8"
-                            android:text="@string/period_duration"
-                            android:textColor="@color/primaryTextColor"
-                            android:textSize="@dimen/config_textsize" />
+                            android:orientation="horizontal"
+                            android:padding="@dimen/config_padding">
 
-                        <Button
-                            android:id="@+id/basket_config_period"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/button_blue_high_radius"
-                            android:textColor="@color/primaryTextColor"
-                            android:textSize="@dimen/config_textsize"
-                            android:textStyle="bold"
-                            app:backgroundTint="@color/black" />
+                            <com.example.smarttraining.Views.TextViewRoboto
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="8"
+                                android:text="@string/display_players"
+                                android:textColor="@color/primaryTextColor"
+                                android:textSize="@dimen/config_textsize" />
+
+                            <Button
+                                android:id="@+id/basket_config_display_players"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/button_blue_low_radius"
+                                android:text="@string/zero"
+                                android:textColor="@color/secondaryTextColor"
+                                android:textSize="@dimen/config_textsize"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/config_padding">
+
+                            <com.example.smarttraining.Views.TextViewRoboto
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="8"
+                                android:text="@string/period_duration"
+                                android:textColor="@color/primaryTextColor"
+                                android:textSize="@dimen/config_textsize" />
+
+                            <Button
+                                android:id="@+id/basket_config_period"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/button_blue_low_radius"
+                                android:text="@string/zero"
+                                android:textColor="@color/secondaryTextColor"
+                                android:textSize="@dimen/config_textsize"
+                                android:textStyle="bold" />
+                        </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-                <LinearLayout
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/config_padding"
+                    android:layout_marginBottom="@dimen/config_padding"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    app:cardBackgroundColor="#FEFEFE"
+                    app:cardCornerRadius="@dimen/size_cardview_radius"
+                    app:cardElevation="@dimen/size_cardview_elevation">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -111,14 +128,14 @@
                             android:id="@+id/basket_config_nb_player"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/button_blue_high_radius"
-                            android:textColor="@color/primaryTextColor"
+                            android:background="@drawable/button_blue_low_radius"
+                            android:text="@string/zero"
+                            android:textColor="@color/secondaryTextColor"
                             android:textSize="@dimen/config_textsize"
-                            android:textStyle="bold"
-                            app:backgroundTint="@color/black" />
+                            android:textStyle="bold" />
 
                     </LinearLayout>
-                </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
             </LinearLayout>
 
@@ -127,282 +144,357 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <LinearLayout
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/config_padding"
+                    android:layout_marginBottom="@dimen/config_padding"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    app:cardBackgroundColor="#FEFEFE"
+                    app:cardCornerRadius="@dimen/size_cardview_radius"
+                    app:cardElevation="@dimen/size_cardview_elevation">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
 
-                        <com.example.smarttraining.Views.TextViewRoboto
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_margin="@dimen/config_padding"
-                            android:text="@string/team_1"
-                            android:textColor="@color/primaryTextColor"
-                            android:textSize="@dimen/config_textsize" />
+                            android:orientation="horizontal">
+
+                            <com.example.smarttraining.Views.TextViewRoboto
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="@dimen/config_padding"
+                                android:text="@string/team_1"
+                                android:textColor="@color/primaryTextColor"
+                                android:textSize="@dimen/config_textsize" />
+
+                            <EditText
+                                android:id="@+id/basket_config_eq1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/config_padding"
+                                android:background="@drawable/edittext_border"
+                                android:hint="@string/team1_name"
+                                android:textColor="@color/primaryTextColor"
+                                android:textColorHint="@color/primaryTextColor"
+                                android:textSize="@dimen/config_textsize" />
+                        </LinearLayout>
 
                         <EditText
-                            android:id="@+id/basket_config_eq1"
+                            android:id="@+id/basket_config_eq1_j1"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:hint="@string/team1_name"
-                            android:textColor="@color/primaryTextColor"
-                            android:textColorHint="@color/primaryTextColor"
-                            android:textSize="@dimen/config_textsize" />
-                    </LinearLayout>
-
-                    <EditText
-                        android:id="@+id/basket_config_eq1_j1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/primaryTextColor"
-                        android:textColorHint="@color/primaryTextColor"
-                        android:textSize="@dimen/config_textsize" />
-
-                    <EditText
-                        android:id="@+id/basket_config_eq1_j2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/primaryTextColor"
-                        android:textColorHint="@color/primaryTextColor"
-                        android:textSize="@dimen/config_textsize" />
-
-                    <EditText
-                        android:id="@+id/basket_config_eq1_j3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/primaryTextColor"
-                        android:textColorHint="@color/primaryTextColor"
-                        android:textSize="@dimen/config_textsize" />
-
-                    <EditText
-                        android:id="@+id/basket_config_eq1_j4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/primaryTextColor"
-                        android:textColorHint="@color/primaryTextColor"
-                        android:textSize="@dimen/config_textsize" />
-
-                    <EditText
-                        android:id="@+id/basket_config_eq1_j5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/primaryTextColor"
-                        android:textColorHint="@color/primaryTextColor"
-                        android:textSize="@dimen/config_textsize" />
-
-                    <EditText
-                        android:id="@+id/basket_config_eq1_j6"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/primaryTextColor"
-                        android:textColorHint="@color/primaryTextColor"
-                        android:textSize="@dimen/config_textsize" />
-
-                    <EditText
-                        android:id="@+id/basket_config_eq1_j7"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/primaryTextColor"
-                        android:textColorHint="@color/primaryTextColor"
-                        android:textSize="@dimen/config_textsize" />
-
-                    <EditText
-                        android:id="@+id/basket_config_eq1_j8"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/primaryTextColor"
-                        android:textColorHint="@color/primaryTextColor"
-                        android:textSize="@dimen/config_textsize" />
-
-                    <EditText
-                        android:id="@+id/basket_config_eq1_j9"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/primaryTextColor"
-                        android:textColorHint="@color/primaryTextColor"
-                        android:textSize="@dimen/config_textsize" />
-
-                    <EditText
-                        android:id="@+id/basket_config_eq1_j10"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/primaryTextColor"
-                        android:textColorHint="@color/primaryTextColor"
-                        android:textSize="@dimen/config_textsize" />
-
-                    <EditText
-                        android:id="@+id/basket_config_eq1_j11"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/primaryTextColor"
-                        android:textColorHint="@color/primaryTextColor"
-                        android:textSize="@dimen/config_textsize" />
-
-                    <EditText
-                        android:id="@+id/basket_config_eq1_j12"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/primaryTextColor"
-                        android:textColorHint="@color/primaryTextColor"
-                        android:textSize="@dimen/config_textsize" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <com.example.smarttraining.Views.TextViewRoboto
-                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
                             android:layout_margin="@dimen/config_padding"
-                            android:text="@string/team_2"
-                            android:textColor="@color/primaryTextColor"
-                            android:textSize="@dimen/config_textsize" />
-
-                        <EditText
-                            android:id="@+id/basket_config_eq2"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:hint="@string/team2_name"
+                            android:background="@drawable/edittext_border"
                             android:textColor="@color/primaryTextColor"
                             android:textColorHint="@color/primaryTextColor"
                             android:textSize="@dimen/config_textsize" />
 
+                        <EditText
+                            android:id="@+id/basket_config_eq1_j2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/config_padding"
+                            android:background="@drawable/edittext_border"
+                            android:textColor="@color/primaryTextColor"
+                            android:textColorHint="@color/primaryTextColor"
+                            android:textSize="@dimen/config_textsize" />
+
+                        <EditText
+                            android:id="@+id/basket_config_eq1_j3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/config_padding"
+                            android:background="@drawable/edittext_border"
+                            android:textColor="@color/primaryTextColor"
+                            android:textColorHint="@color/primaryTextColor"
+                            android:textSize="@dimen/config_textsize" />
+
+                        <EditText
+                            android:id="@+id/basket_config_eq1_j4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/config_padding"
+                            android:background="@drawable/edittext_border"
+                            android:textColor="@color/primaryTextColor"
+                            android:textColorHint="@color/primaryTextColor"
+                            android:textSize="@dimen/config_textsize" />
+
+                        <EditText
+                            android:id="@+id/basket_config_eq1_j5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/config_padding"
+                            android:background="@drawable/edittext_border"
+                            android:textColor="@color/primaryTextColor"
+                            android:textColorHint="@color/primaryTextColor"
+                            android:textSize="@dimen/config_textsize" />
+
+                        <EditText
+                            android:id="@+id/basket_config_eq1_j6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/config_padding"
+                            android:background="@drawable/edittext_border"
+                            android:textColor="@color/primaryTextColor"
+                            android:textColorHint="@color/primaryTextColor"
+                            android:textSize="@dimen/config_textsize" />
+
+                        <EditText
+                            android:id="@+id/basket_config_eq1_j7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/config_padding"
+                            android:background="@drawable/edittext_border"
+                            android:textColor="@color/primaryTextColor"
+                            android:textColorHint="@color/primaryTextColor"
+                            android:textSize="@dimen/config_textsize" />
+
+                        <EditText
+                            android:id="@+id/basket_config_eq1_j8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/config_padding"
+                            android:background="@drawable/edittext_border"
+                            android:textColor="@color/primaryTextColor"
+                            android:textColorHint="@color/primaryTextColor"
+                            android:textSize="@dimen/config_textsize" />
+
+                        <EditText
+                            android:id="@+id/basket_config_eq1_j9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/config_padding"
+                            android:background="@drawable/edittext_border"
+                            android:textColor="@color/primaryTextColor"
+                            android:textColorHint="@color/primaryTextColor"
+                            android:textSize="@dimen/config_textsize" />
+
+                        <EditText
+                            android:id="@+id/basket_config_eq1_j10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/config_padding"
+                            android:background="@drawable/edittext_border"
+                            android:textColor="@color/primaryTextColor"
+                            android:textColorHint="@color/primaryTextColor"
+                            android:textSize="@dimen/config_textsize" />
+
+                        <EditText
+                            android:id="@+id/basket_config_eq1_j11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/config_padding"
+                            android:background="@drawable/edittext_border"
+                            android:textColor="@color/primaryTextColor"
+                            android:textColorHint="@color/primaryTextColor"
+                            android:textSize="@dimen/config_textsize" />
+
+                        <EditText
+                            android:id="@+id/basket_config_eq1_j12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/config_padding"
+                            android:background="@drawable/edittext_border"
+                            android:textColor="@color/primaryTextColor"
+                            android:textColorHint="@color/primaryTextColor"
+                            android:textSize="@dimen/config_textsize" />
+
                     </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-                    <EditText
-                        android:id="@+id/basket_config_eq2_j1"
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/config_padding"
+                    android:layout_marginBottom="@dimen/config_padding"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="#FEFEFE"
+                    app:cardCornerRadius="@dimen/size_cardview_radius"
+                    app:cardElevation="@dimen/size_cardview_elevation">
+
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/primaryTextColor"
-                        android:textColorHint="@color/primaryTextColor"
-                        android:textSize="@dimen/config_textsize" />
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
 
-                    <EditText
-                        android:id="@+id/basket_config_eq2_j2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/primaryTextColor"
-                        android:textColorHint="@color/primaryTextColor"
-                        android:textSize="@dimen/config_textsize" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                    <EditText
-                        android:id="@+id/basket_config_eq2_j3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/primaryTextColor"
-                        android:textColorHint="@color/primaryTextColor"
-                        android:textSize="@dimen/config_textsize" />
+                            <com.example.smarttraining.Views.TextViewRoboto
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="@dimen/config_padding"
+                                android:text="@string/team_2"
+                                android:textColor="@color/primaryTextColor"
+                                android:textSize="@dimen/config_textsize" />
 
-                    <EditText
-                        android:id="@+id/basket_config_eq2_j4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/primaryTextColor"
-                        android:textColorHint="@color/primaryTextColor"
-                        android:textSize="@dimen/config_textsize" />
+                            <EditText
+                                android:id="@+id/basket_config_eq2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/config_padding"
+                                android:background="@drawable/edittext_border"
+                                android:hint="@string/team2_name"
+                                android:textColor="@color/primaryTextColor"
+                                android:textColorHint="@color/primaryTextColor"
+                                android:textSize="@dimen/config_textsize" />
 
-                    <EditText
-                        android:id="@+id/basket_config_eq2_j5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/primaryTextColor"
-                        android:textColorHint="@color/primaryTextColor"
-                        android:textSize="@dimen/config_textsize" />
+                        </LinearLayout>
 
-                    <EditText
-                        android:id="@+id/basket_config_eq2_j6"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/primaryTextColor"
-                        android:textColorHint="@color/primaryTextColor"
-                        android:textSize="@dimen/config_textsize" />
+                        <EditText
+                            android:id="@+id/basket_config_eq2_j1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/config_padding"
+                            android:background="@drawable/edittext_border"
+                            android:textColor="@color/primaryTextColor"
+                            android:textColorHint="@color/primaryTextColor"
+                            android:textSize="@dimen/config_textsize" />
 
-                    <EditText
-                        android:id="@+id/basket_config_eq2_j7"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/primaryTextColor"
-                        android:textColorHint="@color/primaryTextColor"
-                        android:textSize="@dimen/config_textsize" />
+                        <EditText
+                            android:id="@+id/basket_config_eq2_j2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/config_padding"
+                            android:background="@drawable/edittext_border"
+                            android:textColor="@color/primaryTextColor"
+                            android:textColorHint="@color/primaryTextColor"
+                            android:textSize="@dimen/config_textsize" />
 
-                    <EditText
-                        android:id="@+id/basket_config_eq2_j8"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/primaryTextColor"
-                        android:textColorHint="@color/primaryTextColor"
-                        android:textSize="@dimen/config_textsize" />
+                        <EditText
+                            android:id="@+id/basket_config_eq2_j3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/config_padding"
+                            android:background="@drawable/edittext_border"
+                            android:textColor="@color/primaryTextColor"
+                            android:textColorHint="@color/primaryTextColor"
+                            android:textSize="@dimen/config_textsize" />
 
-                    <EditText
-                        android:id="@+id/basket_config_eq2_j9"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/primaryTextColor"
-                        android:textColorHint="@color/primaryTextColor"
-                        android:textSize="@dimen/config_textsize" />
+                        <EditText
+                            android:id="@+id/basket_config_eq2_j4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/config_padding"
+                            android:background="@drawable/edittext_border"
+                            android:textColor="@color/primaryTextColor"
+                            android:textColorHint="@color/primaryTextColor"
+                            android:textSize="@dimen/config_textsize" />
 
-                    <EditText
-                        android:id="@+id/basket_config_eq2_j10"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/primaryTextColor"
-                        android:textColorHint="@color/primaryTextColor"
-                        android:textSize="@dimen/config_textsize" />
+                        <EditText
+                            android:id="@+id/basket_config_eq2_j5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/config_padding"
+                            android:background="@drawable/edittext_border"
+                            android:textColor="@color/primaryTextColor"
+                            android:textColorHint="@color/primaryTextColor"
+                            android:textSize="@dimen/config_textsize" />
 
-                    <EditText
-                        android:id="@+id/basket_config_eq2_j11"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/primaryTextColor"
-                        android:textColorHint="@color/primaryTextColor"
-                        android:textSize="@dimen/config_textsize" />
+                        <EditText
+                            android:id="@+id/basket_config_eq2_j6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/config_padding"
+                            android:background="@drawable/edittext_border"
+                            android:textColor="@color/primaryTextColor"
+                            android:textColorHint="@color/primaryTextColor"
+                            android:textSize="@dimen/config_textsize" />
 
-                    <EditText
-                        android:id="@+id/basket_config_eq2_j12"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/primaryTextColor"
-                        android:textColorHint="@color/primaryTextColor"
-                        android:textSize="@dimen/config_textsize" />
+                        <EditText
+                            android:id="@+id/basket_config_eq2_j7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/config_padding"
+                            android:background="@drawable/edittext_border"
+                            android:textColor="@color/primaryTextColor"
+                            android:textColorHint="@color/primaryTextColor"
+                            android:textSize="@dimen/config_textsize" />
 
-                </LinearLayout>
+                        <EditText
+                            android:id="@+id/basket_config_eq2_j8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/config_padding"
+                            android:background="@drawable/edittext_border"
+                            android:textColor="@color/primaryTextColor"
+                            android:textColorHint="@color/primaryTextColor"
+                            android:textSize="@dimen/config_textsize" />
+
+                        <EditText
+                            android:id="@+id/basket_config_eq2_j9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/config_padding"
+                            android:background="@drawable/edittext_border"
+                            android:textColor="@color/primaryTextColor"
+                            android:textColorHint="@color/primaryTextColor"
+                            android:textSize="@dimen/config_textsize" />
+
+                        <EditText
+                            android:id="@+id/basket_config_eq2_j10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/config_padding"
+                            android:background="@drawable/edittext_border"
+                            android:textColor="@color/primaryTextColor"
+                            android:textColorHint="@color/primaryTextColor"
+                            android:textSize="@dimen/config_textsize" />
+
+                        <EditText
+                            android:id="@+id/basket_config_eq2_j11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/config_padding"
+                            android:background="@drawable/edittext_border"
+                            android:textColor="@color/primaryTextColor"
+                            android:textColorHint="@color/primaryTextColor"
+                            android:textSize="@dimen/config_textsize" />
+
+                        <EditText
+                            android:id="@+id/basket_config_eq2_j12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/config_padding"
+                            android:background="@drawable/edittext_border"
+                            android:textColor="@color/primaryTextColor"
+                            android:textColorHint="@color/primaryTextColor"
+                            android:textSize="@dimen/config_textsize" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
             </LinearLayout>
 
-
-            <Button
-                android:id="@+id/basket_config_play"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_margin="@dimen/config_padding"
-                android:background="@drawable/button_blue_high_radius"
-                android:text="@string/play_button"
-                android:textColor="@color/primaryTextColor"
-                android:textSize="@dimen/config_textsize"
-                android:textStyle="bold"
-                app:backgroundTint="@color/black" />
-
         </LinearLayout>
-
 
     </ScrollView>
 
-</LinearLayout>
+    <Button
+        android:id="@+id/basket_config_play"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="@dimen/config_padding"
+        android:layout_marginTop="@dimen/config_padding"
+        android:layout_marginEnd="@dimen/config_padding"
+        android:layout_marginBottom="@dimen/config_padding"
+        android:background="@drawable/button_blue_high_radius"
+        android:text="@string/play_button"
+        android:textColor="@color/secondaryTextColor"
+        android:textSize="@dimen/config_textsize"
+        android:textStyle="bold" />
+
+</RelativeLayout>

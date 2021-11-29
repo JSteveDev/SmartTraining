@@ -22,12 +22,15 @@ public class Chronometer {
     private int displayFonction;
     private final Activity activity;
 
-    public Chronometer(Activity activity, TextView timeview, int displayFonction) {
+    public Chronometer(Activity activity, TextView timeview, int displayFonction, long time) {
         chronometre = new Timer();
         this.timeview = timeview;
         this.activity = activity;
+        this.time = time;
         this.displayFonction = displayFonction;
     }
+
+    public long getTime() { return time; }
 
     public int getHeures() { return heures; }
 

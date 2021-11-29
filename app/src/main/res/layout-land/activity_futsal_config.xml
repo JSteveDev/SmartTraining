@@ -112,35 +112,28 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/config_padding">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
+                        <com.example.smarttraining.Views.TextViewRoboto
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:padding="@dimen/config_padding">
+                            android:layout_weight="8"
+                            android:text="@string/nb_players_team"
+                            android:textColor="@color/primaryTextColor"
+                            android:textSize="@dimen/config_textsize" />
 
-                            <com.example.smarttraining.Views.TextViewRoboto
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="8"
-                                android:text="@string/nb_players_team"
-                                android:textColor="@color/primaryTextColor"
-                                android:textSize="@dimen/config_textsize" />
+                        <Button
+                            android:id="@+id/futsal_config_nb_player"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/button_blue_low_radius"
+                            android:text="@string/zero"
+                            android:textColor="@color/secondaryTextColor"
+                            android:textSize="@dimen/config_textsize"
+                            android:textStyle="bold" />
 
-                            <Button
-                                android:id="@+id/futsal_config_nb_player"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:background="@drawable/button_blue_low_radius"
-                                android:text="@string/zero"
-                                android:textColor="@color/secondaryTextColor"
-                                android:textSize="@dimen/config_textsize"
-                                android:textStyle="bold" />
-
-                        </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -197,7 +190,6 @@
                             android:id="@+id/futsal_config_eq1_j1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-
                             android:layout_margin="@dimen/config_padding"
                             android:background="@drawable/edittext_border"
                             android:textColor="@color/primaryTextColor"
@@ -207,7 +199,6 @@
                         <EditText
                             android:id="@+id/futsal_config_eq1_j2"
                             android:layout_width="match_parent"
-
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/config_padding"
                             android:background="@drawable/edittext_border"
@@ -217,7 +208,6 @@
 
                         <EditText
                             android:id="@+id/futsal_config_eq1_j3"
-
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/config_padding"
@@ -229,7 +219,6 @@
                         <EditText
                             android:id="@+id/futsal_config_eq1_j4"
                             android:layout_width="match_parent"
-
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/config_padding"
                             android:background="@drawable/edittext_border"

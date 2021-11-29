@@ -46,8 +46,6 @@ public class BadmintonConfig extends AppCompatActivity {
     @State int nb_point_max_value = 25;
     @State int game_mode_value = 0;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
